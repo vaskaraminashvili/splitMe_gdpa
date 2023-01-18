@@ -22,3 +22,10 @@ Route::get('/', function () {
         'event' => 'test'
     ]);
 });
+
+
+Route::get('/about', function () {
+    return Inertia::render('about', [
+        'event' => 'test'
+    ]);
+});

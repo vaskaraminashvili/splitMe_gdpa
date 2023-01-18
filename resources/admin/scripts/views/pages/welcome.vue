@@ -1,5 +1,5 @@
 <template>
-    <div>front from love</div>
+    <div>heheasd asdas heh</div>
 </template>
 
 <script>
