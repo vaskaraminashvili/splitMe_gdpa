@@ -7,7 +7,7 @@
             scrolling="no"
             frameborder="no"
             allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1409836534&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1386292198&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
         ></iframe>
         <div
             style="
@@ -24,19 +24,20 @@
             "
         >
             <a
-                href="https://soundcloud.com/icespiceee"
-                title="Ice Spice"
+                href="https://soundcloud.com/trapicalshh"
+                title="Trapical&#x27;s Hidden Gems"
                 target="_blank"
                 style="color: #cccccc; text-decoration: none"
-                >Ice Spice</a
+                >Trapical&#x27;s Hidden Gems</a
             >
             ·
             <a
-                href="https://soundcloud.com/icespiceee/in-ha-mood-1"
-                title="In Ha Mood"
+                href="https://soundcloud.com/trapicalshh/unholy-yonexx-finnet"
+                title="Sam Smith ft. Kim Petras - Unholy (Yonexx &amp; Finnet Remix)"
                 target="_blank"
                 style="color: #cccccc; text-decoration: none"
-                >In Ha Mood</a
+                >Sam Smith ft. Kim Petras - Unholy (Yonexx &amp; Finnet
+                Remix)</a
             >
         </div>
         <slot />

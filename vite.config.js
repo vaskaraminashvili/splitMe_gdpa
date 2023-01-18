@@ -10,7 +10,12 @@ export default defineConfig({
             include: [/\.vue$/, /\.md$/],
         }),
         laravel({
-            input: ['resources/admin/scss/app.scss', 'resources/admin/scripts/app.js', 'resources/web/scss/app.scss', 'resources/web/js/app.js'],
+            input: [
+                './resources/admin/scss/app.scss',
+                './resources/web/scss/app.scss',
+                './resources/admin/scripts/app.js',
+                './resources/web/scripts/app.js'
+            ],
             refresh: true,
         }),
     ],
