@@ -15,7 +15,5 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('welcome', [
-        'event' => 'test'
-    ]);
+    return view("web::app");
 });
