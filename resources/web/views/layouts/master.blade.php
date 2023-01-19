@@ -4,48 +4,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/font-awesome.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/flaticon/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/slick-theme.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/jquery-ui.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/sal.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/base.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/style.min.css')}}">
 
-  @vite(['resources/web/scss/app.scss', 'resources/web/scripts/app.js'])
+    <link rel="icon" type="image/png" href="images/favicon.png"><!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i"><!-- css -->
+    <link rel="stylesheet" href="{{asset('./assets/vendor/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('./assets/vendor/owl-carousel/assets/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('./assets/vendor/photoswipe/photoswipe.css')}}">
+    <link rel="stylesheet" href="{{asset('./assets/vendor/photoswipe/default-skin/default-skin.css')}}">
+    <link rel="stylesheet" href="{{asset('./assets/vendor/select2/css/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('./assets/css/style.css')}}"><!-- font - fontawesome -->
+    <link rel="stylesheet" href="{{asset('./assets/vendor/fontawesome/css/all.min.css')}}"><!-- font - stroyka -->
+    <link rel="stylesheet" href="{{asset('./assets/fonts/stroyka/stroyka.css')}}">
 </head>
 
 <body>
 
 {{ $slot }}
 
-
-  <!-- JS
-============================================ -->
-  <!-- Modernizer JS -->
-  <script src="{{asset('assets/js/vendor/modernizr.min.js')}}"></script>
-  <!-- jQuery JS -->
-  <script src="{{asset('assets/js/vendor/jquery.js')}}"></script>
-  <!-- Bootstrap JS -->
-  <script src="{{asset('assets/js/vendor/popper.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/slick.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/js.cookie.js')}}"></script>
-  <!-- <script src="{{asset('assets/js/vendor/jquery.style.switcher.js')}}"></script> -->
-  <script src="{{asset('assets/js/vendor/jquery-ui.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/jquery.countdown.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/sal.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/jquery.magnific-popup.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/imagesloaded.pkgd.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/counterup.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/waypoints.min.js')}}"></script>
-
-  <!-- Main JS -->
-  <script src="{{asset('assets/js/main.js')}}"></script>
+<script src="{{asset('./assets/vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('./assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('./assets/vendor/owl-carousel/owl.carousel.min.js')}}"></script>
+<script src="{{asset('./assets/vendor/nouislider/nouislider.min.js')}}"></script>
+<script src="{{asset('./assets/vendor/photoswipe/photoswipe.min.js')}}"></script>
+<script src="{{asset('./assets/vendor/photoswipe/photoswipe-ui-default.min.js')}}"></script>
+<script src="{{asset('./assets/vendor/select2/js/select2.min.js')}}"></script>
+<script src="{{asset('./assets/js/number.js')}}"></script>
+<script src="{{asset('./assets/js/main.js')}}"></script>
+<script src="{{asset('./assets/js/header.js')}}"></script>
 </body>
 
 </html>
