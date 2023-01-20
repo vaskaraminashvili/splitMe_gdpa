@@ -1,52 +1,59 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/font-awesome.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/flaticon/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/slick-theme.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/jquery-ui.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/sal.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/vendor/base.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/style.min.css')}}">
-
-  @vite(['resources/web/scss/app.scss', 'resources/web/scripts/app.js'])
-  @inertiaHead
-</head>
-
-<body>
-
-  @inertia
-
-
-  <!-- JS
-============================================ -->
-  <!-- Modernizer JS -->
-  <script src="{{asset('assets/js/vendor/modernizr.min.js')}}"></script>
-  <!-- jQuery JS -->
-  <script src="{{asset('assets/js/vendor/jquery.js')}}"></script>
-  <!-- Bootstrap JS -->
-  <script src="{{asset('assets/js/vendor/popper.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/slick.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/js.cookie.js')}}"></script>
-  <!-- <script src="{{asset('assets/js/vendor/jquery.style.switcher.js')}}"></script> -->
-  <script src="{{asset('assets/js/vendor/jquery-ui.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/jquery.countdown.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/sal.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/jquery.magnific-popup.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/imagesloaded.pkgd.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/counterup.js')}}"></script>
-  <script src="{{asset('assets/js/vendor/waypoints.min.js')}}"></script>
-
-  <!-- Main JS -->
-  <script src="{{asset('assets/js/main.js')}}"></script>
-</body>
-
-</html>
+<x-layouts.master>
+    <!-- .block-slideshow -->
+    <div class="block-slideshow block-slideshow--layout--with-departments block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="block-slideshow__body">
+                        <div class="owl-carousel"><a class="block-slideshow__slide" href="#">
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
+                                     style="background-image: url('./assets/images/slides/slide-1.jpg')"></div>
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                     style="background-image: url('./assets/images/slides/slide-1-mobile.jpg')"></div>
+                                <div class="block-slideshow__slide-content">
+                                    <div class="block-slideshow__slide-title">Big choice of<br>Plumbing products
+                                    </div>
+                                    <div class="block-slideshow__slide-text">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis
+                                        molestie.
+                                    </div>
+                                    <div class="block-slideshow__slide-button"><span
+                                            class="btn btn-primary btn-lg">Shop Now</span></div>
+                                </div>
+                            </a><a class="block-slideshow__slide" href="#">
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
+                                     style="background-image: url('./assets/images/slides/slide-2.jpg')"></div>
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                     style="background-image: url('./assets/images/slides/slide-2-mobile.jpg')"></div>
+                                <div class="block-slideshow__slide-content">
+                                    <div class="block-slideshow__slide-title">Screwdrivers<br>Professional Tools
+                                    </div>
+                                    <div class="block-slideshow__slide-text">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis
+                                        molestie.
+                                    </div>
+                                    <div class="block-slideshow__slide-button"><span
+                                            class="btn btn-primary btn-lg">Shop Now</span></div>
+                                </div>
+                            </a><a class="block-slideshow__slide" href="#">
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop"
+                                     style="background-image: url('./assets/images/slides/slide-3.jpg')"></div>
+                                <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile"
+                                     style="background-image: url('./assets/images/slides/slide-3-mobile.jpg')"></div>
+                                <div class="block-slideshow__slide-content">
+                                    <div class="block-slideshow__slide-title">One more<br>Unique header</div>
+                                    <div class="block-slideshow__slide-text">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit.<br>Etiam pharetra laoreet dui quis
+                                        molestie.
+                                    </div>
+                                    <div class="block-slideshow__slide-button"><span
+                                            class="btn btn-primary btn-lg">Shop Now</span></div>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .block-slideshow / end -->
+</x-layouts.master>
