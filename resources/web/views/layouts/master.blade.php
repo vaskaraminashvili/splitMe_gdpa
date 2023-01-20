@@ -125,7 +125,8 @@
                                 <button class="topbar-dropdown__btn" type="button">My
                                     Account
                                     <svg width="7px" height="5px">
-                                        <use xlink:href="{{asset('assets/images/sprite.svg#arrow-rounded-down-7x5')}}"></use>
+                                        <use
+                                            xlink:href="{{asset('assets/images/sprite.svg#arrow-rounded-down-7x5')}}"></use>
                                     </svg>
                                 </button>
                                 <div class="topbar-dropdown__body"><!-- .menu -->
@@ -184,7 +185,8 @@
                                         type="button">Currency: <span class="topbar__item-value">USD</span>
                                     <svg
                                         width="7px" height="5px">
-                                        <use xlink:href="{{asset('/assets/images/sprite.svg#arrow-rounded-down-7x5')}}"></use>
+                                        <use
+                                            xlink:href="{{asset('/assets/images/sprite.svg#arrow-rounded-down-7x5')}}"></use>
                                     </svg>
                                 </button>
                                 <div class="topbar-dropdown__body"><!-- .menu -->
@@ -872,12 +874,13 @@
                                         </div>
                                     </div>
                                     <button class="departments__button">
-                                        <svg class="departments__button-icon"
-                                             width="18px" height="14px">
+                                        <svg class="departments__button-icon" width="18px" height="14px">
+                                            <use xlink:href="{{asset('./assets/images/sprite.svg#menu-18x14')}}"></use>
                                         </svg>
                                         Shop By Category
-                                        <svg class="departments__button-arrow" width="9px"
-                                             height="6px">
+                                        <svg class="departments__button-arrow" width="9px" height="6px">
+                                            <use
+                                                xlink:href="{{asset('./assets/images/sprite.svg#arrow-rounded-down-9x6')}}"></use>
                                         </svg>
                                     </button>
                                 </div><!-- .departments / end -->
@@ -889,7 +892,7 @@
                                             <div class="nav-links__item-body">Home
                                                 <svg
                                                     class="nav-links__item-arrow" width="9px" height="6px">
-                                                    </use>
+                                                    <use xlink:href="images/sprite.svg#arrow-rounded-down-9x6"></use>
                                                 </svg>
                                             </div>
                                         </a>
@@ -1410,13 +1413,25 @@
                                 </ul>
                             </div><!-- .nav-links / end -->
                             <div class="nav-panel__indicators">
-                                <div class="indicator"><a href="wishlist.html" class="indicator__button"><span
-                                            class="indicator__area"><svg width="20px" height="20px">
-                                                </svg> <span class="indicator__value">0</span></span></a></div>
-                                <div class="indicator indicator--trigger--click"><a href="cart.html"
-                                                                                    class="indicator__button"><span
-                                            class="indicator__area"><svg width="20px"
+                                <div class="indicator">
+                                    <a href="wishlist.html" class="indicator__button">
+                                            <span
+                                                class="indicator__area">
+                                                <svg width="20px" height="20px">
+                                                    <use xlink:href="images/sprite.svg#heart-20"></use>
+                                                </svg>
+                                                <span class="indicator__value">0</span>
+                                            </span>
+                                    </a>
+                                </div>
+                                <div class="indicator indicator--trigger--click">
+                                    <a href="cart.html"
+                                                                                    class="indicator__button">
+                                        <span
+                                            class="indicator__area">
+                                            <svg width="20px"
                                                                          height="20px">
+                                                    <use xlink:href="images/sprite.svg#cart-20"></use>
                                                 </svg> <span class="indicator__value">3</span></span></a>
                                     <div class="indicator__dropdown"><!-- .dropcart -->
                                         <div class="dropcart dropcart--style--dropdown">
@@ -1572,7 +1587,8 @@
                                             <a
                                                 href="account-dashboard.html" class="account-menu__user">
                                                 <div class="account-menu__user-avatar"><img
-                                                        src="{{asset('/assets/images/avatars/avatar-3.jpg')}}" alt=""></div>
+                                                        src="{{asset('/assets/images/avatars/avatar-3.jpg')}}" alt="">
+                                                </div>
                                                 <div class="account-menu__user-info">
                                                     <div class="account-menu__user-name">Helena Garcia</div>
                                                     <div class="account-menu__user-email">stroyka@example.com</div>
