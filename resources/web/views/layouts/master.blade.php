@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="{{asset('web_assets/css/style.css')}}">
 
     <!--modernizr min js here-->
-    <script src="{{asset('assets/js/vendor/modernizr-3.7.1.min.js')}}"></script>
+    <script src="{{asset('web_assets/js/vendor/modernizr-3.7.1.min.js')}}"></script>
 
 </head>
 
