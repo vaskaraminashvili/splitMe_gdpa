@@ -16,7 +16,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return view("web::app");
+    return view("web::pages.welcome");
 });
 
 

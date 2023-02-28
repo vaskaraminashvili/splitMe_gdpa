@@ -13,6 +13,7 @@ export default defineConfig({
             input: [
                 './resources/admin/scss/app.scss',
                 './resources/web/scss/app.scss',
+
                 './resources/admin/scripts/app.js',
                 './resources/web/scripts/app.js'
             ],
