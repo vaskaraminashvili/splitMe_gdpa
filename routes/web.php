@@ -16,8 +16,9 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return view("web::app");
+    return Inertia::render('welcome', [
+        'event' => 'test'
+    ]);
 });
 
 
-Route::get('/threads', [ThreadsController::class, 'index']);
