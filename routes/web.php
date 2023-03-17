@@ -17,7 +17,11 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('welcome', [
-        'event' => 'test'
+        'data' => [
+            'test',
+            'test2',
+            'test3',
+        ]
     ]);
 });
 

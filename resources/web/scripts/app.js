@@ -2,6 +2,8 @@ import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import { createPinia } from 'pinia'
 import WebLayout from "@/web/scripts/views/layouts/default.vue"
+import globalMixin from '@/web/scripts/mixins/globalMixin.js'
+
 
 const app = createInertiaApp({
     resolve: name => {
@@ -15,6 +17,7 @@ const app = createInertiaApp({
         createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(createPinia())
+            .mixin(globalMixin)
             .mount(el)
 
 

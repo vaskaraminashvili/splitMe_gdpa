@@ -1,16 +1,11 @@
 <template>
-    <div>test </div>
+    <div>test {{$attrs.data[2]}}</div>
 </template>
 
 <script>
 
 
 export default {
-    setup() {
-        const store = useGeneralStore()
-        console.log(store)
-        return {};
-    },
 };
 </script>
 

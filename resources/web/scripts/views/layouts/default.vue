@@ -4,12 +4,16 @@
 
 <script>
 export default {
-    setup() {
-        const store = useGeneralStore()
-        return {
-            store
-        }
-    },
+    // setup() {
+    //     const store = useGeneralStore()
+    //     return {
+    //         store
+    //     };
+    // },
+    // created() {
+    //     this.store.data = this.$attrs.data
+    // },
+    // props: ['data'],
 
 };
 </script>
