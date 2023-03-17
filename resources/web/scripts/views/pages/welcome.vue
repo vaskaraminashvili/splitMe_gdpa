@@ -1,5 +1,5 @@
 <template>
-    <div>heheasd sdf sdfsdf sfsd f heh</div>
+    <div>test  page</div>
 </template>
 
 <script>
