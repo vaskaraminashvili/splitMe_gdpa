@@ -1,14 +1,6 @@
 <template>
     <div id="">
-        <fInput inputValue="exuscss">
-            <fInput inputValue="exuscss">
-                <fInput inputValue="exuscss">
-                    <fInput inputValue="exuscss">
-                        meramdeneeaaas
-                    </fInput>
-                </fInput>
-            </fInput>
-        </fInput>
+        <h1 class="text-3xl font-bold underline">test</h1>
 
     </div>
 </template>

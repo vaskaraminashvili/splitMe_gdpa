@@ -26,6 +26,14 @@ export default defineConfig({
             ]
         }),
     ],
+    css: {
+        postCss: {
+            plugins: {
+                tailwindcss: {},
+                autoprefixer: {},
+            },
+        },
+    },
     resolve: {
         alias: {
             '@': '/resources/',
