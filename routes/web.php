@@ -17,10 +17,10 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('welcome', [
-        'data' => [
-            'test',
-            'test2',
-            'test3',
+        'testData' => [
+            'test 1111111',
+            'test 2222222',
+            'test 3333333',
         ]
     ]);
 });
