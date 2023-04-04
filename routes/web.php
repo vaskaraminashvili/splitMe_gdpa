@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ThreadsController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -15,7 +16,8 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('welcome', [
-        'event' => 'test'
-    ]);
+    return view("web::pages.welcome");
 });
+
+
+Route::get('/threads', [ThreadsController::class, 'index']);

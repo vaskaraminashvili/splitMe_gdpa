@@ -18,14 +18,6 @@ use Inertia\Inertia;
 
 
 Route::get('/', function () {
-    return Inertia::render('welcome', [
-        'event' => 'test'
-    ]);
+    return view("admin::app");
 });
 
-
-Route::get('/about', function () {
-    return Inertia::render('about', [
-        'event' => 'test'
-    ]);
-});

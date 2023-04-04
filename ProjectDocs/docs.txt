@@ -1,0 +1,12 @@
+!!!! BLADE !!!!
+@@@@@
+components layouts load like <x-layouts.master>
+
+@@@@@
+in layut use slot {{ $slot }}
+
+@@@@
+load view from web routes like web::for web indication folder and file
+return view("web::pages.welcome");
+
+!!!! BLADE !!!!
