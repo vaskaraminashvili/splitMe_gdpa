@@ -1,0 +1,40 @@
+@@@@ inerjia js @@@@ setup
+
+here we have to routes as in other starters
+
+
+@@@@@ middleware
+admin and web have separate inetia handlers MIDDLEWARE which responsible for loadint correct views for web and admin
+
+
+@@@@@ resources/assets
+also from vite config we load separate assets for admin and web
+
+@@@@@@ layout
+we are using Persistent layouts this means that pages are nested inside the LAYOUT can be tested in admin page for playing music
+
+@@@@@@@ STRUCTURE
+
+
+web and admin
+for web and admin are created separate folders in resources
+
+resources
+    admin
+        scripts --- here we create all the pages and components
+            views
+                layouts
+                pages
+                app.js --- here we can manage to load components globally for admin
+        scss
+        views
+            app.blade.php ---- this is the default blade file for loading inretia js
+    web
+        scripts --- here we create all the pages and components
+            views
+                layouts
+                pages
+                app.js --- here we can manage to load components globally for web
+        scss
+        views
+            app.blade.php ---- this is the default blade file for loading inretia js

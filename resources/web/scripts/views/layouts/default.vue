@@ -1,8 +1,6 @@
 <template>
-    <div>
-        WEEEB
-        <slot />
-    </div>
+    <slot/>
+
 </template>
 
 <script>

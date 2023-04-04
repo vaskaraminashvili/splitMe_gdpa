@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ThreadsController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -19,3 +20,5 @@ Route::get('/', function () {
         'event' => 'test'
     ]);
 });
+
+
