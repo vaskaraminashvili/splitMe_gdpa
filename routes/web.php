@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Front\IndexController;
+use App\Http\Controllers\Front\LoginController;
 use App\Http\Controllers\ThreadsController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -15,9 +17,8 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return view("web::pages.welcome");
-});
+Route::get('/', IndexController::class);
 
-
+Route::get('/login', [LoginController::class, 'loginForm'])->name('login-form');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 Route::get('/threads', [ThreadsController::class, 'index']);

@@ -32,8 +32,7 @@
     {{-- @vite(['resources/web/scss/app.scss', 'resources/web/scripts/app.js']) --}}
     {{--  <link rel="stylesheet" href="{{ asset('build/assets/app-4c41e8b9.css') }}">--}}
 </head>
-
-<body class="antialiased">
+<body class="login">
 <!-- Preloader -->
 <div id="preloader">
 	<div id="status">&nbsp;</div>
@@ -68,7 +67,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="index.html" class="navbar-brand  data-scroll"><img src="front_assets/images/logo.png" alt=""><span>EduRead</span></a>
+					<a href="#" class="navbar-brand  data-scroll"><img src="front_assets/images/logo.png" alt=""><span>EduRead</span></a>
 				</div>
 
 				<div class="collapse navbar-collapse edu-nav main-menu" id="bs-example-navbar-collapse-1">
@@ -179,10 +178,21 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
 		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="intro-text ">
+						<h1>Login</h1>
+						<p><span><a href="">Home <i class='fa fa-angle-right'></i></a></span><span class="b-active"> Login</span></p>
+					</div>
+				</div>
+			</div><!-- /.row -->
+		</div><!-- /.container -->
 	</div>
-    {{$header}}
 </header>
-	<!--  End header section-->
+<!--  End header section-->
+
 {{ $slot }}
 <!-- Footer Area section -->
 <footer>

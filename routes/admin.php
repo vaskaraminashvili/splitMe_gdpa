@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Back\LoginController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -14,10 +15,14 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/login', [LoginController::class, 'loginForm'])->name('login-form');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
+
+Route::group(['middleware' => 'admin.auth'], function () {
+
+    Route::get('/', function () {
+        return view("admin::app");
+    });
 
 
-
-Route::get('/', function () {
-    return view("admin::app");
 });
-
