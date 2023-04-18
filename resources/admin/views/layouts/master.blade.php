@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="ka" dir="ltr">
 
 <head>
   <meta charset="utf-8">
@@ -48,6 +48,7 @@
       userLinkRTL.setAttribute('disabled', true);
     }
   </script>
+  @vite(['resources/admin/scss/app.scss', 'resources/admin/scripts/app.js'])
 </head>
 
 <body>
@@ -84,38 +85,7 @@
             </div>
           </a>
         </div>
-        <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
-          <div class="navbar-vertical-content scrollbar">
-            <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
-              <li class="nav-item">
-                <!-- label-->
-                <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
-                  <div class="col-auto navbar-vertical-label">App
-                  </div>
-                  <div class="col ps-0">
-                    <hr class="mb-0 navbar-vertical-divider" />
-                  </div>
-                </div>
-                <!-- parent pages-->
-                <a class="nav-link" href="../app/calendar.html" role="button" aria-expanded="false">
-                  <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                        class="fas fa-calendar-alt"></span></span><span class="nav-link-text ps-1">Calendar</span>
-                  </div>
-                </a>
-                <!-- parent pages-->
-                <a class="nav-link" href="../app/chat.html" role="button" aria-expanded="false">
-                  <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                        class="fas fa-comments"></span></span><span class="nav-link-text ps-1">Chat</span>
-                  </div>
-                </a>
-                <!-- parent pages-->
-
-              </li>
-
-            </ul>
-
-          </div>
-        </div>
+        <x-admin::components.mainNav></x-admin::components.mainNav>
       </nav>
       <div class="content">
         <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand">
@@ -133,8 +103,8 @@
           <ul class="navbar-nav navbar-nav-icons ms-auto flex-row align-items-center">
             <li class="nav-item">
               <div class="theme-control-toggle fa-icon-wait px-2">
-                <input class="form-check-input ms-0 theme-control-toggle-input" id="themeControlToggle"
-                  type="checkbox" data-theme-control="theme" value="dark" />
+                <input class="form-check-input ms-0 theme-control-toggle-input" id="themeControlToggle" type="checkbox"
+                  data-theme-control="theme" value="dark" />
                 <label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle"
                   data-bs-toggle="tooltip" data-bs-placement="left" title="Switch to light theme"><span
                     class="fas fa-sun fs-0"></span></label>
