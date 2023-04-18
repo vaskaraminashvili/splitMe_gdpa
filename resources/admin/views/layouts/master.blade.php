@@ -28,6 +28,7 @@
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="../back_assets/vendors/overlayscrollbars/OverlayScrollbars.min.css" rel="stylesheet">
   <link href="../back_assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
   <link href="../back_assets/css/theme.min.css" rel="stylesheet" id="style-default">
@@ -212,6 +213,7 @@
   <!-- ===============================================-->
   <!--    JavaScripts-->
   <!-- ===============================================-->
+
   <script src="../back_assets/vendors/popper/popper.min.js"></script>
   <script src="../back_assets/vendors/bootstrap/bootstrap.min.js"></script>
   <script src="../back_assets/vendors/anchorjs/anchor.min.js"></script>

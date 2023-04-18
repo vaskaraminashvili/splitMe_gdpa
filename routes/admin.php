@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Back\LoginController;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Back\LoginController;
+use App\Http\Controllers\Back\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,8 @@ Route::group(['middleware' => 'admin.auth'], function () {
     Route::get('/', function () {
         return view("admin::app");
     });
+
+    Route::resource('slider', SliderController::class);
 
 
 });
