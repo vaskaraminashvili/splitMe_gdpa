@@ -11,8 +11,8 @@ class LoginController extends Controller
 {
 
     public function loginForm(){
-        dd('admin login form');
-         return view("web::pages.login");
+        // dd('admin login form');
+         return view("admin::pages.login");
     }
     /**
      * Handle an authentication attempt.

@@ -24,8 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Blade::anonymousComponentPath(base_path() . '/resources/admin/views', 'admin');
         Blade::anonymousComponentPath(base_path() . '/resources/web/views');
-        Blade::anonymousComponentPath(base_path() . '/resources/admin/views');
         $this->loadViewsFrom(base_path('resources/admin/views/'), 'admin');
         $this->loadViewsFrom(base_path('resources/web/views/'), 'web');
     }
