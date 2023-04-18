@@ -11,7 +11,7 @@
           </div>
         </div>
         <!-- parent pages-->
-        <a class="nav-link" href="{{ route('admin.slider.index') }}" role="button" aria-expanded="false">
+        <a class="nav-link" href="{{ route('admin.sliders.index') }}" role="button" aria-expanded="false">
           <div class="d-flex align-items-center">
             <span class="nav-link-icon d-flex justify-content-center align-items-center">
               <span class="material-icons text-900 fs-1">apps</span>

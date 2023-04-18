@@ -11,7 +11,6 @@ class LoginController extends Controller
 {
 
     public function loginForm(){
-        dd(auth()->user());
         // dd('admin login form');
          return view("admin::pages.login");
     }

@@ -25,7 +25,7 @@ Route::group(['middleware' => 'admin.auth'], function () {
         return view("admin::app");
     });
 
-    Route::resource('slider', SliderController::class);
+    Route::resource('sliders', SliderController::class);
 
 
 });
