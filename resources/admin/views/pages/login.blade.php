@@ -26,17 +26,19 @@
                 {{-- <div class="col-auto fs--1 text-600"><span class="mb-0 undefined">or</span> <span><a
                       href="../../../pages/authentication/simple/register.html">Create an account</a></span></div> --}}
               </div>
-              <form>
+              <form method="POST" action="{{ route('admin.login') }}">
+                @csrf
                 <div class="mb-3">
-                  <input class="form-control" type="email" placeholder="Email address" />
+                  <input class="form-control" type="email" name="email" placeholder="Email address" />
                 </div>
                 <div class="mb-3">
-                  <input class="form-control" type="password" placeholder="Password" />
+                  <input class="form-control" type="password" name="password" placeholder="Password" />
                 </div>
                 <div class="row flex-between-center">
                   <div class="col-auto">
                     <div class="form-check mb-0">
-                      <input class="form-check-input" type="checkbox" id="basic-checkbox" checked="checked" />
+                      <input class="form-check-input" type="checkbox" name="remember" id="basic-checkbox"
+                        checked="checked" />
                       <label class="form-check-label mb-0" for="basic-checkbox">Remember me</label>
                     </div>
                   </div>

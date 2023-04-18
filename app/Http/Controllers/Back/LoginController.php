@@ -11,6 +11,7 @@ class LoginController extends Controller
 {
 
     public function loginForm(){
+        dd(auth()->user());
         // dd('admin login form');
          return view("admin::pages.login");
     }
@@ -24,13 +25,12 @@ class LoginController extends Controller
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials , $request->get('remember'))) {
             $request->session()->regenerate();
 
 
-            return redirect()->intended('/');
+            return redirect()->intended('/admin');
         }
-
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');

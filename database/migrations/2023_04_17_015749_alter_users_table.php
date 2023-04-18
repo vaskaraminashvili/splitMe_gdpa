@@ -8,7 +8,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->smallInteger('role_id');
+            $table->smallInteger('role_id')->nullable()->after('remember_token');
         });
     }
 
