@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  @vite(['resources/admin/scss/app.scss', 'resources/admin/scripts/app.js'])
-</head>
-
-<body>
-  <h1>admin</h1>
-</body>
-
-</html>
+<x-admin::layouts.master>
+  <div class="card mb-3 overflow-hidden">
+    <div class="card-body overflow-hidden p-lg-6">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque repellat aperiam eum, fuga expedita rerum
+      culpa numquam eaque libero quas possimus repellendus repudiandae exercitationem. Odio, blanditiis. Unde eveniet
+      asperiores optio?
+    </div>
+  </div>
+</x-admin::layouts.master>
