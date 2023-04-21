@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class () extends Migration {
     public function up(): void
     {
         Schema::create('sliders', function (Blueprint $table) {
@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->json('description')->nullable();
             $table->string('link')->nullable();
             $table->tinyInteger('img')->nullable();
-            $table->tinyInteger('sort')->default(0);
+            $table->tinyInteger('sort')->default(0)->nullable();
             $table->tinyInteger('status')->default(1);
             $table->softDeletes();
             $table->timestamps();
