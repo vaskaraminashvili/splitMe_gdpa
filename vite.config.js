@@ -17,7 +17,10 @@ export default defineConfig({
                 './resources/admin/scripts/app.js',
                 './resources/web/scripts/app.js'
             ],
-            refresh: true,
+            refresh: [
+                'resources/**',
+                'routes/**',
+            ],
         }),
     ],
     resolve: {
