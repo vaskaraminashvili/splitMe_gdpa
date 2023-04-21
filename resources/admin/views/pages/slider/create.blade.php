@@ -26,6 +26,7 @@
 
       {{-- sort end --}}
       <x-admin::components.form.input name='sort' label='სორტირება' type='number' />
+
       {{-- sort end --}}
 
 
