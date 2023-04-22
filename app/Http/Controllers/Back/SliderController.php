@@ -13,10 +13,8 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::latest()->first();
-        dd($sliders->removeImage());
-        // dd($sliders->clearMediaCollection('slider'));
-        return  view('admin::pages.slider.index');
+        $sliders = Slider::all();
+        return  view('admin::pages.slider.index', compact('sliders'));
     }
 
     /**
@@ -36,7 +34,7 @@ class SliderController extends Controller
         if($request->hasFile('img') && $request->file('img')->isValid()) {
             $slider->addMediaFromRequest('img')->toMediaCollection('slider');
         }
-        dd($request->all());
+        return redirect()->route('admin.sliders.index');
     }
 
     /**

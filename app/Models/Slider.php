@@ -15,15 +15,18 @@ class Slider extends Model implements HasMedia
 {
     use HasTranslations;
     use SoftDeletes;
+    // add this part if class will have image
     use InteractsWithMedia;
     use HasImage;
-
+    // add this part if class will have image
 
 
     public $translatable = ['title', 'description'];
 
-    protected $guarded = ['img'];
 
+
+    // add this part if class will have image
+    protected $guarded = ['img'];
 
     public function getCurrentClassBasename()
     {
@@ -33,14 +36,14 @@ class Slider extends Model implements HasMedia
     public function registerMediaCollections(): void
     {
         $this
-            ->addMediaCollection('slider');
+        ->addMediaCollection('slider');
     }
 
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('big-thumb')
-              ->width(1680)
-              ->height(815);
+        ->width(1680)
+        ->height(815);
 
         $this->addMediaConversion('card-thumb')
         ->width(633)
@@ -50,6 +53,7 @@ class Slider extends Model implements HasMedia
         ->width(300)
         ->height(100);
     }
+    // add this part if class will have image
 
 
 

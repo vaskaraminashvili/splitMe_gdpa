@@ -3,11 +3,13 @@ body,
 * {
     font-family: "BPG Nino Mtavruli";
 }
-.module_table a:hover{
+.module_table a:hover {
     text-decoration: none;
 }
-.moduel_create_form *, .module_table{
+.moduel_create_form *,
+.module_table,
+.card-header * {
     font-family: "BPG Nino Mtavruli";
     font-weight: 700;
-
+    line-height: normal;
 }
