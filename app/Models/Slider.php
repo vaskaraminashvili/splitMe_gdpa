@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Translatable\HasTranslations;
+use App\Traits\HasImage;
+use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Slider extends Model implements HasMedia
@@ -14,6 +16,7 @@ class Slider extends Model implements HasMedia
     use HasTranslations;
     use SoftDeletes;
     use InteractsWithMedia;
+    use HasImage;
 
 
 
@@ -21,6 +24,11 @@ class Slider extends Model implements HasMedia
 
     protected $guarded = ['img'];
 
+
+    public function getCurrentClassBasename()
+    {
+        return Str::of(self::class)->classBasename()->lower()->value;
+    }
 
     public function registerMediaCollections(): void
     {
@@ -30,7 +38,7 @@ class Slider extends Model implements HasMedia
 
     public function registerMediaConversions(Media $media = null): void
     {
-        $this->addMediaConversion('slider-thumb')
+        $this->addMediaConversion('big-thumb')
               ->width(1680)
               ->height(815);
 
@@ -42,5 +50,7 @@ class Slider extends Model implements HasMedia
         ->width(300)
         ->height(100);
     }
+
+
 
 }

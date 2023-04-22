@@ -14,7 +14,8 @@ class SliderController extends Controller
     public function index()
     {
         $sliders = Slider::latest()->first();
-        dd($sliders->clearMediaCollection('slider'));
+        dd($sliders->removeImage());
+        // dd($sliders->clearMediaCollection('slider'));
         return  view('admin::pages.slider.index');
     }
 
@@ -33,7 +34,7 @@ class SliderController extends Controller
     {
         $slider = Slider::create($request->all());
         if($request->hasFile('img') && $request->file('img')->isValid()) {
-            $slider->addMediaFromRequest('img')->withResponsiveImages()->toMediaCollection('slider');
+            $slider->addMediaFromRequest('img')->toMediaCollection('slider');
         }
         dd($request->all());
     }
