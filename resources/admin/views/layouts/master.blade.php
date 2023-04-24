@@ -208,6 +208,7 @@
       </div>
     </div>
   </main>
+  <x-admin::components.toast.container />
   <x-admin::components.toast.success />
 
 
