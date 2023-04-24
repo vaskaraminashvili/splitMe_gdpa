@@ -58,11 +58,11 @@ class SliderController extends Controller
      */
     public function update(Request $request, Slider $slider)
     {
+        // make here to show live toast when updating status
         $slider->update($request->all());
         if (!$request->get('statusUpdate')) {
             return redirect()->route('admin.sliders.edit', $slider->id)->withSuccess(__('განახლდა'));
         }
-
     }
 
     /**

@@ -51,8 +51,5 @@
     </form>
   </x-admin::card>
 
-  <x-slot:script>
-    <script src="{{ asset('../back_assets/vendors/tinymce/tinymce.min.js') }}"></script>
 
-  </x-slot:script>
 </x-admin::layouts.master>

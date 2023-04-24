@@ -44,10 +44,7 @@
       userLinkDefault.setAttribute('disabled', true);
       document.querySelector('html').setAttribute('dir', 'rtl');
     } else {
-      var linkRTL = document.getElementById('style-rtl');
-      var userLinkRTL = document.getElementById('user-style-rtl');
-      linkRTL.setAttribute('disabled', true);
-      userLinkRTL.setAttribute('disabled', true);
+
     }
   </script>
   @vite(['resources/admin/scss/app.scss', 'resources/admin/scripts/app.js'])
@@ -234,6 +231,7 @@
   <script src="{{ asset('../back_assets/vendors/list.js/list.min.js') }}"></script>
   <script src="{{ asset('../back_assets/js/theme.js') }}"></script>
   <script src="{{ asset('../back_assets/js/jquery-3.6.4.min.js') }}"></script>
+  <script src="{{ asset('../back_assets/vendors/tinymce/tinymce.min.js') }}"></script>
 
   {{ $script ?? '' }}
 </body>
