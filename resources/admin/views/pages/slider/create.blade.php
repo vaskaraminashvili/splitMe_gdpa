@@ -26,7 +26,7 @@
       {{-- description end --}}
 
       {{-- sort end --}}
-      <x-admin::components.form.input name='sort' label='სორტირება' type='number' />
+      <x-admin::components.form.input name='sort' value="0" label='სორტირება' type='number' />
       {{-- sort end --}}
 
 

@@ -21,6 +21,7 @@
   <link rel="manifest" href=""{{ asset('../back_assets/img/favicons/manifest.json') }}">
   <meta name="msapplication-TileImage" content="../back_assets/img/favicons/mstile-150x150.png">
   <meta name="theme-color" content="#ffffff">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <script src="" {{ asset('../back_assets/js/config.js') }}"></script>
   <script src="" {{ asset('../back_assets/vendors/overlayscrollbars/OverlayScrollbars.min.js') }}"></script>
   <!-- ===============================================-->
@@ -32,9 +33,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="{{ asset('../back_assets/vendors/overlayscrollbars/OverlayScrollbars.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('../back_assets/css/theme-rtl.min.css') }}" rel="stylesheet" id="style-rtl">
   <link href="{{ asset('../back_assets/css/theme.min.css') }}" rel="stylesheet" id="style-default">
-  <link href="{{ asset('../back_assets/css/user-rtl.min.css') }}" rel="stylesheet" id="user-style-rtl">
   <link href="{{ asset('../back_assets/css/user.min.css') }}" rel="stylesheet" id="user-style-default">
   <script>
     var isRTL = JSON.parse(localStorage.getItem('isRTL'));
@@ -212,6 +211,12 @@
       </div>
     </div>
   </main>
+  <x-admin::components.toast.success />
+
+
+  {{-- toast --}}
+
+  {{-- toast --}}
   <!-- ===============================================-->
   <!--    End of Main Content-->
   <!-- ===============================================-->

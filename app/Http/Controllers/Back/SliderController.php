@@ -48,24 +48,29 @@ class SliderController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Slider $slider)
     {
-        //
+        return view('admin::pages.slider.edit', compact('slider'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Slider $slider)
     {
-        //
+        $slider->update($request->all());
+        if (!$request->get('statusUpdate')) {
+            return redirect()->route('admin.sliders.edit', $slider->id)->withSuccess(__('განახლდა'));
+        }
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Slider $slider)
     {
-        //
+        $slider->delete();
+        return redirect()->route('admin.sliders.index')->withSuccess(__('წაიშალა'));
     }
 }

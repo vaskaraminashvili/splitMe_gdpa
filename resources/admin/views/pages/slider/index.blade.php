@@ -24,33 +24,43 @@
             </tr>
           </thead>
           <tbody class="list index_table">
-            @foreach ($sliders as $slide)
+            @foreach ($sliders as $slider)
               <tr>
-                <td class="">{{ $slide->id }}</td>
+                <td class="">{{ $slider->id }}</td>
                 <td class="">
-                  @if ($slide->smallThumb())
+                  @if ($slider->smallThumb())
                     <div class="avatar avatar-xl">
-                      <img src="{{ $slide->smallThumb() }}" alt="" />
+                      <a href="{{ $slider->bigThumb() }}" target="_blank">
+                        <img src="{{ $slider->smallThumb() }}" alt="" />
+                      </a>
                     </div>
                   @endif
                 </td>
-                <td class="">{{ $slide->title }}</td>
-                <td class="">{{ $slide->sort }}</td>
+                <td class="">{{ $slider->title }}</td>
+                <td class="">{{ $slider->sort }}</td>
                 <td class="text-end">
-                  @if ($slide->link)
-                    <a href="{{ $slide->link }}" class="me-1" title="{{ __('ლინკზე გადასვლა') }}" target="_blank">
+                  @if ($slider->link)
+                    <a href="{{ $slider->link }}" class="me-1" title="{{ __('ლინკზე გადასვლა') }}" target="_blank">
                       <span class="fa-fw text-primary fas fa-link"></span>
                     </a>
                   @endif
-                  <a href="#" class="me-1 change_status" title="{{ __('სტატუსი') }}">
-                    <span class="fa-fw text-success far fa-eye"></span>
+                  <a href="#" class="me-1 change_status" data-status="{{ $slider->status }}"
+                    data-id="{{ $slider->id }}" title="{{ __('სტატუსი') }}">
+                    <span class="fa-fw text-success far {{ $slider->status ? 'fa-eye' : 'fa-eye-slash' }}"></span>
                   </a>
-                  <a href="#" class="me-1" title="{{ __('შეცვლა') }}">
+                  <a href="{{ route('admin.sliders.edit', $slider->id) }}" class="me-1" title="{{ __('შეცვლა') }}">
                     <span class="text-info fa-fw far fa-edit"></span>
                   </a>
-                  <a href="#" class="me-1" title="{{ __('წაშლა') }}">
-                    <span class="text-danger fa-fw fas fa-trash"></span>
-                  </a>
+                  <form action="{{ route('admin.sliders.destroy', $slider->id) }}" method="POST"
+                    class="d-inline-block">
+                    @csrf
+                    @method('DELETE')
+                    <input type="hidden" name="id" value="{{ $slider->id }}">
+                    <button class="btn btn-outline-light p-0 m-0" type="submit">
+                      <span class="text-danger fa-fw fas fa-trash"></span>
+                    </button>
+                  </form>
+
                 </td>
               </tr>
             @endforeach
@@ -68,7 +78,38 @@
     </div>
   </x-admin::card>
   <x-slot:script>
-    <script></script>
+    <script>
+      $(function() {
+        $(document).on('click', '.change_status', function() {
+          var $this = $(this);
+          var status = $this.data('status') == 1 ? 0 : 1;
+          var id = $this.data('id');
+          if (status == 1) {
+            $this.find('svg').removeClass('fa-eye-slash');
+            $this.find('svg').addClass('fa-eye');
+          } else {
+            $this.find('svg').removeClass('fa-eye');
+            $this.find('svg').addClass('fa-eye-slash');
+          }
+
+          $.ajax({
+            type: "PUT",
+            url: "./sliders/" + id,
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: {
+              status: status,
+              statusUpdate: true,
+            },
+            success: function(result) {
+              $this.data('status', status);
+            }
+          });
+        });
+
+      });
+    </script>
   </x-slot:script>
 
 </x-admin::layouts.master>
