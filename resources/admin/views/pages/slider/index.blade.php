@@ -42,7 +42,7 @@
                       <span class="fa-fw text-primary fas fa-link"></span>
                     </a>
                   @endif
-                  <a href="#" class="me-1" title="{{ __('სტატუსი') }}">
+                  <a href="#" class="me-1 change_status" title="{{ __('სტატუსი') }}">
                     <span class="fa-fw text-success far fa-eye"></span>
                   </a>
                   <a href="#" class="me-1" title="{{ __('შეცვლა') }}">
@@ -67,6 +67,8 @@
       </div>
     </div>
   </x-admin::card>
-
+  <x-slot:script>
+    <script></script>
+  </x-slot:script>
 
 </x-admin::layouts.master>
