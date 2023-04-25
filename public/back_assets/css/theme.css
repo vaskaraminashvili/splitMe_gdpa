@@ -59,7 +59,7 @@
   --falcon-font-sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --falcon-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --falcon-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --falcon-body-font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --falcon-body-font-family: "BPG Nino Mtavruli", Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --falcon-body-font-size: 1rem;
   --falcon-body-font-weight: 400;
   --falcon-body-line-height: 1.5;
@@ -26667,7 +26667,7 @@ a[href].bg-200:hover, a[href].bg-200:focus {
   }
 }
 /*-----------------------------------------------
-|  Back to top button   
+|  Back to top button
 -----------------------------------------------*/
 .btn-back-to-top {
   background-color: #0b1727;

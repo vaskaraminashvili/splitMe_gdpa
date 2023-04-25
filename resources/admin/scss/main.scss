@@ -1,3 +1,27 @@
+input,
+button,
+select,
+optgroup,
+textarea,
+label,
+.alert,
+.badge,
+.blockquote-footer,
+.btn,
+[data-list] .page,
+.tox .tox-menu__footer .tox-button:last-child,
+.tox .tox-dialog__footer .tox-button:last-child,
+.tox .tox-menu__footer .tox-button--secondary,
+.tox .tox-dialog__footer .tox-button--secondary,
+.navbar,
+.pagination,
+.valid-feedback,
+.invalid-feedback {
+    font-family: "BPG Nino Mtavruli", "Poppins", -apple-system,
+        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 html,
 body,
 * {

@@ -11,9 +11,17 @@ class SliderController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $sliders = Slider::paginate();
+        $sliders = Slider::query();
+        if($request->has('filter_name')) {
+            $sliders->where('title->ka', 'LIKE', "%{$request->get('filter_name')}%");
+        }
+        if($request->isMethod('post')) {
+            $sliders = $sliders->paginate();
+            return  view('admin::pages.slider.table', compact('sliders'));
+        }
+        $sliders = $sliders->paginate();
         return  view('admin::pages.slider.index', compact('sliders'));
     }
 
@@ -60,6 +68,9 @@ class SliderController extends Controller
     {
         // make here to show live toast when updating status
         $slider->update($request->all());
+        if($request->hasFile('img') && $request->file('img')->isValid()) {
+            $slider->addMediaFromRequest('img')->toMediaCollection('slider');
+        }
         if (!$request->get('statusUpdate')) {
             return redirect()->route('admin.sliders.edit', $slider->id)->withSuccess(__('განახლდა'));
         }

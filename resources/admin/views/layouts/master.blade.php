@@ -235,6 +235,7 @@
   <script src="{{ asset('../back_assets/vendors/tinymce/tinymce.min.js') }}"></script>
 
   {{ $script ?? '' }}
+  @stack('script')
 </body>
 
 </html>
