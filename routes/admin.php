@@ -26,7 +26,7 @@ Route::group(['middleware' => 'admin.auth'], function () {
     });
 
     Route::resource('sliders', SliderController::class);
-    Route::post('sliders', [SliderController::class, 'index'])->name('sliders.filter');
+    Route::post('sliders/filter', [SliderController::class, 'index'])->name('sliders.filter');
 
 
 });

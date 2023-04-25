@@ -1,7 +1,16 @@
+@props(['module' => 'slider', 'field_name' => 'filter_name'])
+{{--
+for now filter component accepts two props
+
+module --- this one is used to change url for example for witch module we are workin slider, news, blogs, etc
+
+field_name --- this will be field name by whitch modele above will be queryied
+--}}
+
 <div class="table_filter mb-3">
   <div class="row">
     <div class="col-xl-3">
-      <x-admin::components.form.input label='სახელი' name='filter_name' :value="app('request')->input('filter_name')" />
+      <x-admin::components.form.input label='სახელი' :name='$field_name' :value="app('request')->input($field_name)" />
     </div>
   </div>
   <div class="row">
@@ -21,26 +30,31 @@
   <script>
     $(function() {
 
-      $(document).on('input', '#filter_namenput1', $.debounce(250, function() {
+      $(document).on('input', '#{{ $field_name }}nput1', $.debounce(250, function() {
         var $this = $(this);
         var value = $this.val();
         filterTable(value);
       }));
       $(document).on('click', $.debounce(250, function() {
-        var value = $('#filter_namenput1').val();
+        var value = $('#{{ $field_name }}nput1').val();
         filterTable(value);
       }));
 
       function filterTable(value, table = null) {
         $.ajax({
           type: "post",
-          url: "/admin/sliders?filter_name=" + value,
+          url: "/admin/{{ $module }}/filter?{{ $field_name }}=" + value,
           headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           },
           success: function(result) {
             $('#tableExample2').html(result);
-            window.history.pushState('obj', 'newtitle', '/admin/sliders?filter_name=' + value);
+            if (!value) {
+              window.history.pushState('obj', 'newtitle', '/admin/{{ $module }}');
+            } else {
+              window.history.pushState('obj', 'newtitle', '/admin/{{ $module }}?{{ $field_name }}=' +
+                value);
+            }
           }
         });
       }
