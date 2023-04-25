@@ -1,5 +1,13 @@
 <x-admin::layouts.master>
   <x-admin::card>
+    <x-slot:title>
+      {{ __('სლაიდერი დანატება') }}
+    </x-slot:title>
+    <x-slot:button>
+      <a href="{{ route('admin.sliders.index') }}" class="btn btn-falcon-primary me-1 mb-1 ms-auto"
+        type="button">{{ __('უკან დაბრინება') }}
+      </a>
+    </x-slot:button>
     <form action="{{ route('admin.sliders.store') }}" method="post" class="moduel_create_form"
       enctype="multipart/form-data">
       @csrf

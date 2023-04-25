@@ -3,12 +3,12 @@
     <x-slot:title>
       {{ __('სლაიდერი') }}
     </x-slot:title>
-    <x-slot:create_button>
+    <x-slot:button>
       <a href="{{ route('admin.sliders.create') }}" class="btn btn-falcon-success me-1 mb-1"
         type="button">{{ __('დამატება') }}
       </a>
-    </x-slot:create_button>
-    <div id="tableExample2" data-list='{"valueNames":["name","email","age"],"page":5,"pagination":true}'>
+    </x-slot:button>
+    <div id="tableExample2" data-list='{"valueNames":["name","email","age"],"page":15,"pagination":true}'>
       <div class="table-responsive scrollbar">
         <table class="table table-bordered table-striped mb-0 module_table">
           <thead class="bg-200 text-900">
@@ -68,12 +68,8 @@
           </tbody>
         </table>
       </div>
-      <div class="d-flex justify-content-center mt-3">
-        <button class="btn btn-sm btn-falcon-default me-1" type="button" title="Previous"
-          data-list-pagination="prev"><span class="fas fa-chevron-left"></span></button>
-        <ul class="pagination mb-0"></ul>
-        <button class="btn btn-sm btn-falcon-default ms-1" type="button" title="Next"
-          data-list-pagination="next"><span class="fas fa-chevron-right"> </span></button>
+      <div class="d-flex justify-content-center mt-3 custom_pagination">
+        {{ $sliders->links('admin::components.pagination') }}
       </div>
     </div>
   </x-admin::card>
