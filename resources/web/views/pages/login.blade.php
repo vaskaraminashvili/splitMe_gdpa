@@ -1,4 +1,4 @@
-<x-layouts.login>
+<x-web::layouts.login>
 
   <!-- Teachers Area section -->
   <section class="login-area">
@@ -26,4 +26,4 @@
     </div>
   </section>
   <!-- ./ End Teachers Area section -->
-</x-layouts.login>
+</x-web::layouts.login>

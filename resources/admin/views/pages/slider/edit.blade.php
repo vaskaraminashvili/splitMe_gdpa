@@ -45,7 +45,8 @@
           <img class="img-thumbnail mb-2" src="{{ $slider->smallThumb() }}" alt="" />
         </a>
       @endif
-      <div class="mb-3">
+      <div class="mb-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
+        title="{{ __('მაქსიმალური ფაილის ზომა 2mb') }}">
         <label class="form-label" for="customFile">{{ __('ფოტოს ატვირთვა') }}</label>
         <input class="form-control" id="customFile" name="img" type="file" value="{{ $slider->smallThumb() }}" />
       </div>
