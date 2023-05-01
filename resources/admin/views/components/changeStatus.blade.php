@@ -1,3 +1,4 @@
+@props(['module' => 'slider'])
 <script>
   $(function() {
     $(document).on('click', '.change_status', function() {
@@ -14,7 +15,7 @@
 
       $.ajax({
         type: "PUT",
-        url: "./sliders/" + id,
+        url: "./{{ $module }}/" + id,
         headers: {
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },

@@ -192,8 +192,7 @@
           <div class="col-md-12">
             <div class="intro-text ">
               <h1>Login</h1>
-              <p><span><a href="">Home <i class='fa fa-angle-right'></i></a></span><span class="b-active">
-                  Login</span></p>
+              <p>{{ Breadcrumbs::render('web.login') }}</p>
             </div>
           </div>
         </div><!-- /.row -->

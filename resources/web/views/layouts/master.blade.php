@@ -213,51 +213,8 @@
             </ul>
           </div>
 
-          <div class="col-sm-2">
-            <h3>Courses</h3>
-            <ul class="list-unstyled">
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Web Design</a></li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Apps Developer</a>
-              </li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Graphic Design</a>
-              </li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>PHP Tranning</a>
-              </li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>IOS Developer</a>
-              </li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>App Design</a></li>
-            </ul>
-          </div>
 
-          <div class="col-sm-2">
-            <h3>Links</h3>
-            <ul class="list-unstyled">
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>About Us</a></li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Teacher</a></li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Blog</a></li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Events</a></li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Gallery</a></li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-sm-2">
-            <h3>Support</h3>
-            <ul class="list-unstyled">
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Documentation</a>
-              </li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Forums</a></li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Language Packs</a>
-              </li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Release Status</a>
-              </li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Documentation</a>
-              </li>
-              <li><a href="#"><span><i class="fa fa-long-arrow-right footer-icon"></i></span>Forums</a></li>
-            </ul>
-          </div>
-
-          <div class="col-sm-3">
+          <div class="col-sm-3 col-xs-offset-6">
             <h3>Get in touch</h3>
             <p>Enter your email and we'll send you more information.</p>
 

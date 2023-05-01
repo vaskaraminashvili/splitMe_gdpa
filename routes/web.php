@@ -17,7 +17,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', IndexController::class);
+Route::get('/', IndexController::class)->name('home');
 
 Route::get('/login', [LoginController::class, 'loginForm'])->name('login-form');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
