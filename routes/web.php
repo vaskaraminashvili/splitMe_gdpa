@@ -1,10 +1,11 @@
 <?php
 
+use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ThreadsController;
+use App\Http\Controllers\Front\UserController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\LoginController;
-use App\Http\Controllers\ThreadsController;
-use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,5 @@ Route::get('/', IndexController::class)->name('home');
 
 Route::get('/login', [LoginController::class, 'loginForm'])->name('login-form');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
-Route::get('/threads', [ThreadsController::class, 'index']);
+
+Route::get('/profile', [UserController::class, 'profile'])->name('profile');

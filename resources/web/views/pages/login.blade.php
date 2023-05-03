@@ -1,4 +1,4 @@
-<x-web::layouts.login>
+<x-web::layouts.secondary>
 
   <!-- Teachers Area section -->
   <section class="login-area">
@@ -7,23 +7,23 @@
         <div class="col-sm-6 col-sm-offset-3">
           <form action="{{ route('login') }}" method="post" class="learnpro-register-form text-center">
             @csrf
-            <p class="lead">Welcome Back</p>
+            <p class="lead">{{ __('კეთილი იყოს თქვენი დაბრუნება') }}</p>
             <div class="form-group">
-              <input autocomplete="off" class="required form-control" placeholder="Email *" name="email"
+              <input autocomplete="off" class="required form-control" placeholder="{{ __('ელ.ფოსტა') }} *" name="email"
                 type="email">
             </div>
             <div class="form-group">
-              <input class="required form-control" placeholder="Password *" name="password" type="password">
+              <input class="required form-control" placeholder="{{ __('პაროლი') }} *" name="password" type="password">
             </div>
             <div class="form-group register-btn">
-              <button type="submit" class="btn btn-primary btn-lg">Register</button>
+              <button type="submit" class="btn btn-primary btn-lg">{{ __('შესვლა') }}</button>
             </div>
-            <a href="forgot_password.html"><strong>Forgot password?</strong></a>
-            <p>Not a member? <a href="register.html"><strong>Join today</strong></a></p>
+            <a href="forgot_password.html"><strong>{{ __('დაგავიწყდა პაროლი ? ') }}</strong></a>
+            {{-- <p>Not a member? <a href="register.html"><strong>Join today</strong></a></p> --}}
           </form>
         </div>
       </div>
     </div>
   </section>
   <!-- ./ End Teachers Area section -->
-</x-web::layouts.login>
+</x-web::layouts.secondary>

@@ -28,15 +28,14 @@
   <link rel="stylesheet" href="{{ asset('../front_assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('../front_assets/css/responsive.css') }}">
 
-
   @vite(['resources/web/scss/app.scss', 'resources/web/scripts/app.js'])
   {{--  <link rel="stylesheet" href="{{ asset('build/assets/app-4c41e8b9.css') }}"> --}}
 </head>
 
-
-<body class="antialiased">
+<body>
   <!-- Preloader -->
   <div id="preloader">
+
     <div id="status">&nbsp;</div>
   </div>
   <header id="header">
@@ -52,8 +51,7 @@
           <div class="col-sm-6 col-xs-12 header-top-right">
             <ul class="list-unstyled">
               @auth
-                <li><a href="{{ route('profile') }}"><i class="fa fa-user top-icon"></i>
-                    {{ auth()->user()->name }}</a></li>
+                <li><a href="register.html"><i class="fa fa-user top-icon"></i> {{ auth()->user()->name }}</a></li>
 
               @endauth
               @guest
@@ -88,10 +86,21 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
       </nav>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="intro-text ">
+              <h1>Login</h1>
+              {{-- <p>{{ Breadcrumbs::render('web.login') }}</p> --}}
+            </div>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
     </div>
-    {{ $header ?? '' }}
   </header>
   <!--  End header section-->
+
   {{ $slot }}
   <!-- Footer Area section -->
   <footer>
@@ -155,7 +164,6 @@
       </div>
     </div><!-- ./ End footer-bottom -->
   </footer><!-- ./ End Footer Area-->
-
 </body>
 
 
@@ -163,47 +171,46 @@
 JavaScript Files
 ============================= -->
 <!-- jQuery -->
-<script src="{{ asset('../front_assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+<script src="front_assets/js/vendor/jquery-1.12.4.min.js"></script>
 <!-- Bootstrap JS -->
-<script src="{{ asset('../front_assets/js/assets/bootstrap.min.js') }}"></script>
+<script src="front_assets/js/assets/bootstrap.min.js"></script>
 <!-- owl carousel -->
-<script src="{{ asset('../front_assets/js/assets/owl.carousel.min.js') }}"></script>
+<script src="front_assets/js/assets/owl.carousel.min.js"></script>
 <!-- Revolution Slider -->
-<script src="{{ asset('../front_assets/js/assets/revolution/jquery.themepunch.revolution.min.js') }}"></script>
-<script src="{{ asset('../front_assets/js/assets/revolution/jquery.themepunch.tools.min.js') }}"></script>
+<script src="front_assets/js/assets/revolution/jquery.themepunch.revolution.min.js"></script>
+<script src="front_assets/js/assets/revolution/jquery.themepunch.tools.min.js"></script>
 <!-- Popup -->
-<script src="{{ asset('../front_assets/js/assets/jquery.magnific-popup.min.js') }}"></script>
+<script src="front_assets/js/assets/jquery.magnific-popup.min.js"></script>
 <!-- Sticky JS -->
-<script src="{{ asset('../front_assets/js/assets/jquery.sticky.js') }}"></script>
+<script src="front_assets/js/assets/jquery.sticky.js"></script>
 <!-- Counter Up -->
-<script src="{{ asset('../front_assets/js/assets/jquery.counterup.min.js') }}"></script>
-<script src="{{ asset('../front_assets/js/assets/waypoints.min.js') }}"></script>
+<script src="front_assets/js/assets/jquery.counterup.min.js"></script>
+<script src="front_assets/js/assets/waypoints.min.js"></script>
 <!-- Slick Slider-->
-<script src="{{ asset('../front_assets/js/assets/slick.min.js') }}"></script>
+<script src="front_assets/js/assets/slick.min.js"></script>
 <!-- Main Menu -->
-<script src="{{ asset('../front_assets/js/assets/jquery.meanmenu.min.js') }}"></script>
+<script src="front_assets/js/assets/jquery.meanmenu.min.js"></script>
 <!-- Revolution Extensions -->
-<script type="text/javascript"
-  src="{{ asset('../front_assets/js/assets/revolution/extensions/revolution.extension.actions.min.js') }}"></script>
-<script type="text/javascript"
-  src="{{ asset('../front_assets/js/assets/revolution/extensions/revolution.extension.carousel.min.js') }}"></script>
-<script type="text/javascript"
-  src="{{ asset('../front_assets/js/assets/revolution/extensions/revolution.extension.kenburn.min.js') }}"></script>
-<script type="text/javascript"
-  src="{{ asset('../front_assets/js/assets/revolution/extensions/revolution.extension.layeranimation.min.js') }}">
+<script type="text/javascript" src="front_assets/js/assets/revolution/extensions/revolution.extension.actions.min.js">
+</script>
+<script type="text/javascript" src="front_assets/js/assets/revolution/extensions/revolution.extension.carousel.min.js">
+</script>
+<script type="text/javascript" src="front_assets/js/assets/revolution/extensions/revolution.extension.kenburn.min.js">
 </script>
 <script type="text/javascript"
-  src="{{ asset('../front_assets/js/assets/revolution/extensions/revolution.extension.migration.min.js') }}"></script>
+  src="front_assets/js/assets/revolution/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="front_assets/js/assets/revolution/extensions/revolution.extension.migration.min.js">
+</script>
 <script type="text/javascript"
-  src="{{ asset('../front_assets/js/assets/revolution/extensions/revolution.extension.navigation.min.js') }}"></script>
+  src="front_assets/js/assets/revolution/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="front_assets/js/assets/revolution/extensions/revolution.extension.parallax.min.js">
+</script>
 <script type="text/javascript"
-  src="{{ asset('../front_assets/js/assets/revolution/extensions/revolution.extension.parallax.min.js') }}"></script>
-<script type="text/javascript"
-  src="{{ asset('../front_assets/js/assets/revolution/extensions/revolution.extension.slideanims.min.js') }}"></script>
-<script type="text/javascript"
-  src="{{ asset('../front_assets/js/assets/revolution/extensions/revolution.extension.video.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('../front_assets/js/assets/revolution/revolution.js') }}"></script>
+  src="front_assets/js/assets/revolution/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="front_assets/js/assets/revolution/extensions/revolution.extension.video.min.js">
+</script>
+<script type="text/javascript" src="front_assets/js/assets/revolution/revolution.js"></script>
 <!-- Custom JS -->
-<script src="{{ asset('../front_assets/js/custom.js') }}"></script>
+<script src="front_assets/js/custom.js"></script>
 
 </html>
