@@ -4,6 +4,7 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Back\LoginController;
 use App\Http\Controllers\Back\SliderController;
+use App\Http\Controllers\Back\ConferenceController;
 use App\Http\Controllers\Back\NewsController;
 
 /*
@@ -31,6 +32,9 @@ Route::group(['middleware' => 'admin.auth'], function () {
 
     Route::resource('news', NewsController::class);
     Route::post('news/filter', [NewsController::class, 'index'])->name('news.filter');
+
+    Route::resource('conference', ConferenceController::class);
+    Route::post('conference/filter', [ConferenceController::class, 'index'])->name('conference.filter');
 
 
 });

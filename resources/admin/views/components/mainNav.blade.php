@@ -29,6 +29,15 @@
             <span class="nav-link-text ps-1">{{ __('სიახლეები') }} </span>
           </div>
         </a>
+        <a class="nav-link" href="{{ route('admin.conference.index') }}" role="button" aria-expanded="false">
+          <div class="d-flex align-items-center">
+            <span class="nav-link-icon d-flex justify-content-center align-items-center">
+              <span class="material-icons text-900 fs-1">apps</span>
+
+            </span>
+            <span class="nav-link-text ps-1">{{ __('კონფერენციის ბმულები') }} </span>
+          </div>
+        </a>
 
         <!-- parent pages-->
         <a class="nav-link" href="../app/chat.html" role="button" aria-expanded="false">
