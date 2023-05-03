@@ -24,3 +24,4 @@ Route::get('/login', [LoginController::class, 'loginForm'])->name('login-form');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+Route::post('/profile', [UserController::class, 'updateProfile'])->name('updateProfile');

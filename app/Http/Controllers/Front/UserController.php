@@ -11,4 +11,9 @@ class UserController extends Controller
     {
         return view("web::pages.profile.index");
     }
+
+    public function updateProfile()
+    {
+        dd(request()->all());
+    }
 }

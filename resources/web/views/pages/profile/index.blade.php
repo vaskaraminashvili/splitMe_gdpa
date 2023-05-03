@@ -5,27 +5,26 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
-            <form action="" class="learnpro-register-form">
-              <p class="lead">Register New Account</p>
+            <form action="{{ route('updateProfile') }}" method="POST" class="learnpro-register-form">
+              @csrf
+              <p class="lead">{{ __('პროფილის რედაქტირება') }}</p>
               <div class="form-group">
-                <input autocomplete="off" class="form-control" placeholder="First Name" type="text">
+                <input autocomplete="off" class="form-control" placeholder="{{ __('სახელი') }}" type="text">
               </div>
               <div class="form-group">
-                <input autocomplete="off" class="form-control" placeholder="Last Name" type="text">
+                <input autocomplete="off" class="form-control" placeholder="{{ __('გვარი') }}" type="text">
+              </div>
+
+              <div class="form-group">
+                <input class="required form-control" placeholder="{{ __('პაროლი') }}" type="password">
               </div>
               <div class="form-group">
-                <input autocomplete="off" class="required form-control" placeholder="Username *" type="text">
+                <input class="required form-control" placeholder="{{ __('ელ.ფოსტა') }}" type="email">
               </div>
-              <div class="form-group">
-                <input class="required form-control" placeholder="Password *" type="password">
-              </div>
-              <div class="form-group">
-                <input class="required form-control" placeholder="Email *" type="email">
-              </div>
-              <textarea class="form-control" placeholder="About / Bio" name="bio" rows="3" style="resize: none;"></textarea>
+              <textarea class="form-control" placeholder="{{ __('ბიო') }}" name="bio" rows="3" style="resize: none;"></textarea>
 
               <div class="form-group register-btn">
-                <submit class="btn btn-primary btn-lg">Register</submit>
+                <button type="submit" class="btn btn-primary btn-lg">{{ __('შენახვა') }}</button>
               </div>
             </form>
           </div>

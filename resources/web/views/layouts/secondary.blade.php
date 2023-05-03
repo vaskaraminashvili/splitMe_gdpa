@@ -64,7 +64,7 @@
       </div>
     </div><!-- Ends: .header-top -->
 
-    <div class="header-body">
+    <div class="header-body header-body--secondary">
       <nav class="navbar edu-navbar">
         <div class="container">
           <div class="navbar-header">

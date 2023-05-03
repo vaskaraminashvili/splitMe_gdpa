@@ -4,28 +4,30 @@
 
 header {
     .header-body {
-        min-height: 360px;
-        background-size: cover;
-        position: relative;
-        background: rgb(254, 199, 34);
-        background: linear-gradient(
-            0deg,
-            rgba(254, 199, 34, 1) 0%,
-            rgba(248, 195, 37, 1) 40%,
-            rgba(102, 102, 102, 1) 100%
-        );
-        .intro-text {
-            text-align: center;
-            margin-top: 80px;
-            h1 {
-                font-family: "Montserrat", sans-serif;
-                font-size: 45px;
-                font-weight: 700;
-                color: #ffffff;
-                margin: 0;
-            }
-            p {
-                margin-top: 15px;
+        &--secondary {
+            min-height: 360px;
+            background-size: cover;
+            position: relative;
+            background: rgb(254, 199, 34);
+            background: linear-gradient(
+                0deg,
+                rgba(254, 199, 34, 1) 0%,
+                rgba(248, 195, 37, 1) 40%,
+                rgba(102, 102, 102, 1) 100%
+            );
+            .intro-text {
+                text-align: center;
+                margin-top: 80px;
+                h1 {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 45px;
+                    font-weight: 700;
+                    color: #ffffff;
+                    margin: 0;
+                }
+                p {
+                    margin-top: 15px;
+                }
             }
         }
     }
