@@ -1,4 +1,7 @@
 @props(['module' => 'slider', 'field_name' => 'filter_name'])
+@php
+  $url = Str::plural($module);
+@endphp
 {{--
 for now filter component accepts two props
 
@@ -35,7 +38,7 @@ field_name --- this will be field name by whitch modele above will be queryied
         var value = $this.val();
         filterTable(value);
       }));
-      $(document).on('click', $.debounce(250, function() {
+      $(document).on('click', '.filter_btn', $.debounce(250, function() {
         var value = $('#{{ $field_name }}nput1').val();
         filterTable(value);
       }));
@@ -43,16 +46,20 @@ field_name --- this will be field name by whitch modele above will be queryied
       function filterTable(value, table = null) {
         $.ajax({
           type: "post",
-          url: "/admin/{{ $module }}/filter?{{ $field_name }}=" + value,
+          url: "/admin/filter?{{ $field_name }}=" + value,
           headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
+          data: {
+            module: '{{ $module }}',
+
           },
           success: function(result) {
             $('#tableExample2').html(result);
             if (!value) {
-              window.history.pushState('obj', 'newtitle', '/admin/{{ $module }}');
+              window.history.pushState('obj', 'newtitle', '/admin/{{ $url }}');
             } else {
-              window.history.pushState('obj', 'newtitle', '/admin/{{ $module }}?{{ $field_name }}=' +
+              window.history.pushState('obj', 'newtitle', '/admin/{{ $url }}?{{ $field_name }}=' +
                 value);
             }
           }

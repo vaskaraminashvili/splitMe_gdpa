@@ -17,10 +17,6 @@ class ConferenceController extends Controller
         if($request->has('filter_name')) {
             $conferences->where('title->ka', 'LIKE', "%{$request->get('filter_name')}%");
         }
-        if($request->isMethod('post')) {
-            $conferences = $conferences->paginate();
-            return  view('admin::pages.conference.table', compact('conferences'));
-        }
         $conferences = $conferences->paginate();
         return  view('admin::pages.conference.index', compact('conferences'));
     }
@@ -71,9 +67,8 @@ class ConferenceController extends Controller
         if($request->hasFile('img') && $request->file('img')->isValid()) {
             $conference->addMediaFromRequest('img')->toMediaCollection('conference');
         }
-        if (!$request->get('statusUpdate')) {
-            return redirect()->route('admin.conferences.edit', $conference->id)->withSuccess(__('განახლდა'));
-        }
+        return redirect()->route('admin.conferences.edit', $conference->id)->withSuccess(__('განახლდა'));
+
     }
 
     /**

@@ -15,13 +15,14 @@
 
       $.ajax({
         type: "PUT",
-        url: "./{{ $module }}/" + id,
+        url: "./changeStatus/",
         headers: {
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
         data: {
           status: status,
-          statusUpdate: true,
+          module: '{{ $module }}',
+          id: id,
         },
         success: function(result) {
           $this.data('status', status);

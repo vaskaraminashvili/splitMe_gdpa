@@ -17,10 +17,7 @@ class NewsController extends Controller
         if($request->has('filter_name')) {
             $news->where('title->ka', 'LIKE', "%{$request->get('filter_name')}%");
         }
-        if($request->isMethod('post')) {
-            $news = $news->paginate();
-            return  view('admin::pages.news.table', compact('news'));
-        }
+
         $news = $news->paginate();
         return  view('admin::pages.news.index', compact('news'));
     }
@@ -67,17 +64,14 @@ class NewsController extends Controller
      */
     public function update(Request $request, News $news)
     {
-        // make here to show live toast when updating status
-        if (!$request->get('statusUpdate')) {
-            $request->merge(['slug' => geoToEng($request->title['ka'])]);
-        }
+
+        $request->merge(['slug' => geoToEng($request->title['ka'])]);
         $news->update($request->all());
         if($request->hasFile('img') && $request->file('img')->isValid()) {
             $news->addMediaFromRequest('img')->toMediaCollection('news');
         }
-        if (!$request->get('statusUpdate')) {
-            return redirect()->route('admin.news.edit', $news->id)->withSuccess(__('განახლდა'));
-        }
+        return redirect()->route('admin.news.edit', $news->id)->withSuccess(__('განახლდა'));
+
     }
 
     /**

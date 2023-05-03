@@ -17,10 +17,7 @@ class SliderController extends Controller
         if($request->has('filter_name')) {
             $sliders->where('title->ka', 'LIKE', "%{$request->get('filter_name')}%");
         }
-        if($request->isMethod('post')) {
-            $sliders = $sliders->paginate();
-            return  view('admin::pages.slider.table', compact('sliders'));
-        }
+
         $sliders = $sliders->paginate();
         return  view('admin::pages.slider.index', compact('sliders'));
     }
@@ -71,9 +68,8 @@ class SliderController extends Controller
         if($request->hasFile('img') && $request->file('img')->isValid()) {
             $slider->addMediaFromRequest('img')->toMediaCollection('slider');
         }
-        if (!$request->get('statusUpdate')) {
-            return redirect()->route('admin.sliders.edit', $slider->id)->withSuccess(__('განახლდა'));
-        }
+        return redirect()->route('admin.sliders.edit', $slider->id)->withSuccess(__('განახლდა'));
+
     }
 
     /**

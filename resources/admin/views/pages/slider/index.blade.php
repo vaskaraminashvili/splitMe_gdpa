@@ -14,7 +14,7 @@
     {{-- card header end --}}
 
     {{-- filter --}}
-    <x-admin::components.filter.default module='sliders' />
+    <x-admin::components.filter.default module='slider' />
     {{-- filter end --}}
 
     {{-- table which will be replaced dynamically when filtered --}}
@@ -26,7 +26,7 @@
   <x-slot:script>
 
     {{-- js part for changing status on module --}}
-    <x-admin::components.changeStatus module='sliders' />
+    <x-admin::components.changeStatus module='slider' />
     {{-- js part for changing status on module --}}
 
   </x-slot:script>
