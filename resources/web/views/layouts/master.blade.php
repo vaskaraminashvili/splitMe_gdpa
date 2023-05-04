@@ -54,6 +54,15 @@
               @auth
                 <li><a href="{{ route('profile') }}"><i class="fa fa-user top-icon"></i>
                     {{ auth()->user()->name }}</a></li>
+                <li>
+                  <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit">
+                      <i class="fa fa-power-off top-icon "> </i>
+                    </button>
+                  </form>
+
+                </li>
 
               @endauth
               @guest

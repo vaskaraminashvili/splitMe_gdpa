@@ -1,4 +1,4 @@
-<x-web::layouts.secondary>
+<x-web::layouts.login>
 
   <!-- Teachers Area section -->
   <section class="login-area">
@@ -18,7 +18,7 @@
             <div class="form-group register-btn">
               <button type="submit" class="btn btn-primary btn-lg">{{ __('შესვლა') }}</button>
             </div>
-            <a href="forgot_password.html"><strong>{{ __('დაგავიწყდა პაროლი ? ') }}</strong></a>
+            <a href="forgot_password.html"><strong>{{ __('დაგავიწყდა პაროლი ?') }}</strong></a>
             {{-- <p>Not a member? <a href="register.html"><strong>Join today</strong></a></p> --}}
           </form>
         </div>
@@ -26,4 +26,4 @@
     </div>
   </section>
   <!-- ./ End Teachers Area section -->
-</x-web::layouts.secondary>
+</x-web::layouts.login>

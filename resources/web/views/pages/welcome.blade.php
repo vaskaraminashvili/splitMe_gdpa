@@ -48,6 +48,154 @@
       </div><!-- END SLIDER CONTAINER -->
     </div><!-- END SLIDER CONTAINER WRAPPER -->
   </x-slot:header>
-  sdfsd fsd
+
+  <div class="home_version_02">
+    <!-- Start Welcome Area section -->
+    <section class="Welcome-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 section-header-box">
+            <div class="section-header">
+              <h2>Welcome to EduRead</h2>
+              <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget Etiam maecenas.
+              </p>
+            </div><!-- ends: .section-header -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4 wel-ful-box-2">
+            <div class="wel-text-box">
+              <div class="wel-icon">
+                <img src="{{ asset('../front_assets/images/index-02/welcome-01.png') }}" alt="">
+              </div>
+              <div class="wel-text">
+                <h3>Learn Anywhere Online</h3>
+                <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget Etiam
+                  maecenas.</p>
+                <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 wel-ful-box-2">
+            <div class="wel-text-box">
+              <div class="wel-icon">
+                <img src="{{ asset('../front_assets/images/index-02/welcome-02.png') }}" alt="">
+              </div>
+              <div class="wel-text">
+                <h3>Graduation Certificate</h3>
+                <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget Etiam
+                  maecenas.</p>
+                <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4  wel-ful-box-2">
+            <div class="wel-text-box">
+              <div class="wel-icon">
+                <img src="{{ asset('../front_assets/images/index-02/welcome-03.png') }}" alt="">
+              </div>
+              <div class="wel-text">
+                <h3>Professional Teachers</h3>
+                <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget Etiam
+                  maecenas.</p>
+                <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./ End Welcome Area section -->
+
+
+    <!-- Start Register Area section -->
+    <section class="register-area">
+      <div class="overlay-bg">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-5">
+              <div class="row">
+                <div class="form-full-box">
+                  <div class="header-box-top">
+                    <div class="col-sm-12 section-header-box">
+                      <div class="section-header">
+                        <h2>Register Now</h2>
+                      </div><!-- ends: .section-header -->
+                    </div>
+                    <p>Create your free account now and get immediate access to 100s of online courses.</p>
+                  </div>
+                  <form>
+                    <div class="register-form">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <input class="form-control" name="name" placeholder="Name" required="" type="text">
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <input class="form-control" name="email" placeholder="Email" required=""
+                              type="email">
+                          </div>
+                        </div>
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <input class="form-control" name="phone" placeholder="Phone" required=""
+                              type="text">
+                          </div>
+                        </div>
+                        <div class="col-xs-12 register-btn-box">
+                          <button class="register-btn" type="submit">Submit Now</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-7 form-content">
+              <div class="row">
+                <div class="col-sm-12 section-header-box">
+                  <div class="section-header section-header-l">
+                    <h2>Are You Ready for Study?</h2>
+                  </div><!-- ends: .section-header -->
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam maecenas
+                vel vici quis dictum rutrum nec nisi et. Ac penatibus aenean laoreet. Pede enim nunc ultricies quis
+                rhoncus penatibus tincidunt integer felis quam neque ridiculus. Dapibus sit vel amet libero quisque Ante
+                vel quis ultricies elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./ End Register Area section -->
+    <!-- Start Information Area Section -->
+    <section class="information-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="info-content-box">
+              <h2>Need More Information?</h2>
+              <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasell us eget Etiam maecenas
+                vel vici quis dictum rutrum nec nisi Ac penatibus.</p>
+              <div class="info-btn">
+                <a href="#" class="information-btn">cuntact us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./ End Information Area section -->
+
+  </div>
 
 </x-web::layouts.master>

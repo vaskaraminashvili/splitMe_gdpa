@@ -52,6 +52,15 @@
             <ul class="list-unstyled">
               @auth
                 <li><a href="register.html"><i class="fa fa-user top-icon"></i> {{ auth()->user()->name }}</a></li>
+                <li>
+                  <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit">
+                      <i class="fa fa-power-off top-icon "> </i>
+                    </button>
+                  </form>
+
+                </li>
 
               @endauth
               @guest
