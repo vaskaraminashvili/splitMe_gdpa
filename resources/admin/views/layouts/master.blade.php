@@ -14,16 +14,16 @@
   <!-- ===============================================-->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('../back_assets/img/favicons/apple-touch-icon.png') }}">
   <link rel="icon" type="image/png" sizes="32x32"
-    href=""{{ asset('../back_assets/img/favicons/favicon-32x32.png') }}">
+    href="{{ asset('../back_assets/img/favicons/favicon-32x32.png') }}">
   <link rel="icon" type="image/png" sizes="16x16"
-    href=""{{ asset('../back_assets/img/favicons/favicon-16x16.png') }}">
-  <link rel="shortcut icon" type="image/x-icon" href=""{{ asset('../back_assets/img/favicons/favicon.ico') }}">
-  <link rel="manifest" href=""{{ asset('../back_assets/img/favicons/manifest.json') }}">
+    href="{{ asset('../back_assets/img/favicons/favicon-16x16.png') }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('../back_assets/img/favicons/favicon.ico') }}">
+  <link rel="manifest" href="{{ asset('../back_assets/img/favicons/manifest.json') }}">
   <meta name="msapplication-TileImage" content="../back_assets/img/favicons/mstile-150x150.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <script src="" {{ asset('../back_assets/js/config.js') }}"></script>
-  <script src="" {{ asset('../back_assets/vendors/overlayscrollbars/OverlayScrollbars.min.js') }}"></script>
+  <script src="{{ asset('../back_assets/js/config.js') }}"></script>
+  <script src="{{ asset('../back_assets/vendors/overlayscrollbars/OverlayScrollbars.min.js') }}"></script>
   <!-- ===============================================-->
   <!--    Stylesheets-->
   <!-- ===============================================-->
@@ -48,6 +48,7 @@
     }
   </script>
   @vite(['resources/admin/scss/app.scss', 'resources/admin/scripts/app.js'])
+  @stack('style')
 </head>
 
 <body>
