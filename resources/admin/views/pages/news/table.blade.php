@@ -6,8 +6,8 @@
         <thead class="bg-200 text-900">
           <tr>
             <th class="sort" data-sort="">ID</th>
-            <th class="">{{ __('ფოტო') }}</th>
-            <th class="sort" data-sort="">{{ __('სახელი') }}</th>
+            {{-- <th class="">{{ __('ფოტო') }}</th> --}}
+            <th class="sort" data-sort="">{{ __('მოკლე აღწერა') }}</th>
             <th class="sort" data-sort="" style="width: 10%">{{ __('დალაგება') }}</th>
 
             <th class="text-end" style="width:15%">
@@ -19,7 +19,7 @@
           @foreach ($news as $item)
             <tr>
               <td class="">{{ $item->id }}</td>
-              <td class="">
+              {{-- <td class="">
                 @if ($item->smallThumb())
                   <div class="avatar avatar-xl">
                     <a href="{{ $item->bigThumb() }}" target="_blank">
@@ -27,9 +27,9 @@
                     </a>
                   </div>
                 @endif
-              </td>
-              <td class="">{{ $item->title }}</td>
-              <td class="">{{ $item->sort }}</td>
+              </td> --}}
+              <td class="">{{ Str::limit($item->short_description, 80, ' (...)') }}</td>
+              <td class="text-center">{{ $item->sort }}</td>
               <td class="text-end">
                 @if ($item->link)
                   <a href="{{ $item->link }}" class="me-1" title="{{ __('ლინკზე გადასვლა') }}" target="_blank">

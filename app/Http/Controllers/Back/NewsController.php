@@ -14,12 +14,12 @@ class NewsController extends Controller
     public function index(Request $request)
     {
         $news = News::query();
-        if($request->has('filter_name')) {
+        if ($request->has('filter_name')) {
             $news->where('title->ka', 'LIKE', "%{$request->get('filter_name')}%");
         }
 
         $news = $news->paginate();
-        return  view('admin::pages.news.index', compact('news'));
+        return view('admin::pages.news.index', compact('news'));
     }
 
     /**
@@ -35,9 +35,9 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        $request->merge(['user_id' => auth()->user()->id, 'slug' => geoToEng($request->title['ka'])]);
+        $request->merge(['user_id' => auth()->user()->id, 'slug' => $request->title['ka']]);
         $news = News::create($request->all());
-        if($request->hasFile('img') && $request->file('img')->isValid()) {
+        if ($request->hasFile('img') && $request->file('img')->isValid()) {
             $news->addMediaFromRequest('img')->toMediaCollection('news');
         }
         return redirect()->route('admin.news.index');
@@ -67,7 +67,7 @@ class NewsController extends Controller
 
         $request->merge(['slug' => geoToEng($request->title['ka'])]);
         $news->update($request->all());
-        if($request->hasFile('img') && $request->file('img')->isValid()) {
+        if ($request->hasFile('img') && $request->file('img')->isValid()) {
             $news->addMediaFromRequest('img')->toMediaCollection('news');
         }
         return redirect()->route('admin.news.edit', $news->id)->withSuccess(__('განახლდა'));

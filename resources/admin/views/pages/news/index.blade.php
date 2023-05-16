@@ -14,7 +14,7 @@
     {{-- card header end --}}
 
     {{-- filter --}}
-    <x-admin::components.filter.default module='news' />
+    {{-- <x-admin::components.filter.default module='news' /> --}}
     {{-- filter end --}}
 
     {{-- table which will be replaced dynamically when filtered --}}
