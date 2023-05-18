@@ -56,9 +56,18 @@ Route::group(['middleware' => 'admin.auth'], function () {
 Route::get('/import_data', function () {
     $records = DB::table('sheet')
         ->get();
+    $date = '';
     foreach ($records as $key => $record) {
         $test = engToGeo($record->name);
-
+        if (intval($record->name)) {
+            $date = intval($record->name);
+            $timestemp = $date . "-01-01";
+            $date = Carbon\Carbon::createFromFormat('Y-m-d', $timestemp);
+            continue;
+        }
+        if ($record->name == null) {
+            continue;
+        }
         $member = [
             'title' => [
                 'ka' => $test ? $test : ' ',
@@ -69,13 +78,14 @@ Route::get('/import_data', function () {
                 'ka' => $test,
                 'en' => $test,
             ],
+            'date' => $date,
             'slug' => $record->name,
+            'phone' => $record->mob,
             'sort' => 1,
             'status' => 1,
             'user_id' => 1,
         ];
-        dd($member);
-        // App\Models\Member::create($member);
+        App\Models\Member::create($member);
 
     }
 

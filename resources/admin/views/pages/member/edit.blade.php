@@ -31,13 +31,21 @@
       </x-admin::components.form.tabs>
       {{-- description end --}}
 
+      {{-- phone --}}
+      <x-admin::components.form.input name='phone' :value="$member->phone" label='საკონტაქტო' />
+      {{-- phone end --}}
+
+      {{-- registration --}}
+      <x-admin::components.form.date name='date' :value="$member->date" label='რეგისრაციის თარიღი' />
+      {{-- registration end --}}
+
       {{-- sort end --}}
       <x-admin::components.form.input name='sort' :value="$member->sort" label='სორტირება' type='number' />
-      {{-- sort end --}}
+      {{-- sort --}}
 
 
       {{-- image --}}
-      @if ($member->smallThumb())
+      {{-- @if ($member->smallThumb())
         <a href="{{ $member->bigThumb() }}" target="_blank">
           <img class="img-thumbnail mb-2" src="{{ $member->smallThumb() }}" alt="" />
         </a>
@@ -46,7 +54,7 @@
         title="{{ __('მაქსიმალური ფაილის ზომა 2mb') }}">
         <label class="form-label" for="customFile">{{ __('ფოტოს ატვირთვა') }}</label>
         <input class="form-control" id="customFile" name="img" type="file" value="{{ $member->smallThumb() }}" />
-      </div>
+      </div> --}}
       {{-- image end --}}
 
 

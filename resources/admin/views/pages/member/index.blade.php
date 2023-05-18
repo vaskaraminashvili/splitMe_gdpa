@@ -14,7 +14,7 @@
     {{-- card header end --}}
 
     {{-- filter --}}
-    <x-admin::components.filter.default module='member' />
+    {{-- <x-admin::components.filter.default module='member' /> --}}
     {{-- filter end --}}
 
     {{-- table which will be replaced dynamically when filtered --}}

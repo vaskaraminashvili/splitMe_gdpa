@@ -233,7 +233,6 @@
   <script src="{{ asset('../back_assets/vendors/list.js/list.min.js') }}"></script>
   <script src="{{ asset('../back_assets/js/theme.js') }}"></script>
   <script src="{{ asset('../back_assets/js/jquery-3.6.4.min.js') }}"></script>
-  <script src="{{ asset('../back_assets/vendors/tinymce/tinymce.min.js') }}"></script>
 
   {{ $script ?? '' }}
   @stack('script')

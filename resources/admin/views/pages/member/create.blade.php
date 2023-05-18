@@ -30,9 +30,18 @@
       </x-admin::components.form.tabs>
       {{-- description end --}}
 
+      {{-- phone --}}
+      <x-admin::components.form.input name='phone' label='საკონტაქტო' />
+      {{-- phone end --}}
+
+      {{-- registration --}}
+      <x-admin::components.form.date name='date' label='რეგისრაციის თარიღი' />
+      {{-- registration end --}}
+
       {{-- sort end --}}
       <x-admin::components.form.input name='sort' value="0" label='სორტირება' type='number' />
       {{-- sort end --}}
+
 
 
       {{-- image --}}
@@ -50,8 +59,4 @@
     </form>
   </x-admin::card>
 
-  <x-slot:scipts>
-    <script src="{{ asset('../back_assets/vendors/tinymce/tinymce.min.js') }}"></script>
-
-  </x-slot:scipts>
 </x-admin::layouts.master>

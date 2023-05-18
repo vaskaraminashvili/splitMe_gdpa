@@ -13,11 +13,9 @@ class MemberController extends Controller
      */
     public function index(Request $request)
     {
-        $members = Member::query();
-        if ($request->has('filter_name')) {
-            $members->where('title->ka', 'LIKE', "%{$request->get('filter_name')}%");
-        }
-
+        $members = Member::query()
+            ->orderBy('sort', 'DESC')
+            ->orderBy('date', 'DESC');
         $items = $members->paginate();
         return view('admin::pages.member.index', compact('items'));
     }
@@ -80,6 +78,6 @@ class MemberController extends Controller
     public function destroy(Member $memeber)
     {
         $memeber->delete();
-        return redirect()->route('admin.memebers.index')->withSuccess(__('წაიშალა'));
+        return redirect()->route('admin.members.index')->withSuccess(__('წაიშალა'));
     }
 }

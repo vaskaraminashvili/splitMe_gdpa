@@ -13,3 +13,8 @@
     </div>
   </div>
 </div>
+
+
+@pushOnce('script')
+  <script src="{{ asset('../back_assets/vendors/tinymce/tinymce.min.js') }}"></script>
+@endPushOnce

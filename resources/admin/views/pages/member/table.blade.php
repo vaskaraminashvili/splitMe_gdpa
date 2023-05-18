@@ -5,10 +5,10 @@
       <table class="table table-bordered table-striped mb-0 module_table">
         <thead class="bg-200 text-900">
           <tr>
-            <th class="sort" data-sort="">ID</th>
-            <th class="">{{ __('ფოტო') }}</th>
+            <th class="sort" data-sort="">Index</th>
+            <th class="">{{ __('რეგისრაციის თარიღი') }}</th>
             <th class="sort" data-sort="">{{ __('სახელი') }}</th>
-            <th class="sort" data-sort="" style="width: 10%">{{ __('დალაგება') }}</th>
+            <th class="sort" data-sort="" style="width: 10%">{{ __('საკონტაქტო') }}</th>
 
             <th class="text-end" style="width:15%">
               <span class="text-900 fas fa-cogs"></span>
@@ -18,18 +18,10 @@
         <tbody class=" index_table">
           @foreach ($items as $item)
             <tr>
-              <td class="">{{ $item->id }}</td>
-              <td class="">
-                @if ($item->smallThumb())
-                  <div class="avatar avatar-xl">
-                    <a href="{{ $item->bigThumb() }}" target="_blank">
-                      <img src="{{ $item->smallThumb() }}" alt="" />
-                    </a>
-                  </div>
-                @endif
-              </td>
+              <td class="">{{ ($items->currentpage() - 1) * $items->perpage() + $loop->index + 1 }}</td>
+              <td class="">{{ $item->date }}</td>
               <td class="">{{ $item->title }}</td>
-              <td class="">{{ $item->sort }}</td>
+              <td class="">{{ $item->phone }}</td>
               <td class="text-end">
                 @if ($item->link)
                   <a href="{{ $item->link }}" class="me-1" title="{{ __('ლინკზე გადასვლა') }}" target="_blank">
