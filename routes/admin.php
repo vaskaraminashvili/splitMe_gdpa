@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Back\NewsController;
+use App\Http\Controllers\Back\SliderController;
+use App\Http\Controllers\Back\GalleryController;
+use App\Http\Controllers\Back\ConferenceController;
 use App\Http\Controllers\Back\LoginController;
 use App\Http\Controllers\Back\ShareController;
 use App\Http\Controllers\Back\MemberController;
@@ -45,15 +48,13 @@ Route::group(['middleware' => 'admin.auth'], function () {
 
 
 
-use App\Http\Controllers\Back\SliderController;
-use App\Http\Controllers\Back\GalleryController;
-use App\Http\Controllers\Back\ConferenceController;
+
 
 
 
 // import fron inident all the news
 Route::get('/import_data', function () {
-    $records = DB::table('Sheet1')
+    $records = DB::table('sheet')
         ->get();
     foreach ($records as $key => $record) {
         $test = engToGeo($record->name);
@@ -73,7 +74,8 @@ Route::get('/import_data', function () {
             'status' => 1,
             'user_id' => 1,
         ];
-        App\Models\Member::create($member);
+        dd($member);
+        // App\Models\Member::create($member);
 
     }
 
