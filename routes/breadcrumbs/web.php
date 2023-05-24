@@ -29,3 +29,13 @@ Breadcrumbs::for ('about', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
     $trail->push('ჩვენს შესახებ', route('about'));
 });
+
+Breadcrumbs::for ('contact', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('კონტაქტი', route('contact'));
+});
+
+Breadcrumbs::for ('profile', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('პროფილი', route('profile'));
+});

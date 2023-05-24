@@ -27,8 +27,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ asset('../front_assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('../front_assets/css/responsive.css') }}">
+  <link rel="stylesheet" href="{{ asset('../front_assets/css/custom.css') }}">
 
-  @vite(['resources/web/scss/app.scss', 'resources/web/scripts/app.js'])
+  {{-- @vite(['resources/web/scss/app.scss', 'resources/web/scripts/app.js']) --}}
   @stack('style')
   {{--  <link rel="stylesheet" href="{{ asset('build/assets/app-4c41e8b9.css') }}"> --}}
 </head>
@@ -88,8 +89,7 @@
               <span class="icon-bar"></span>
             </button>
             <a href="/" class="navbar-brand  data-scroll">
-              {{-- <img src="front_assets/images/logo.png" alt=""> --}}
-              <span>GDPA LOGO</span>
+              <img src="front_assets/images/gdpa_logo.png" alt="">
             </a>
           </div>
 
