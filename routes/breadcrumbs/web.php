@@ -14,7 +14,7 @@ Breadcrumbs::for ('home', function (BreadcrumbTrail $trail) {
 });
 
 // Home > Login
-Breadcrumbs::for ('login', function (BreadcrumbTrail $trail) {
+Breadcrumbs::for ('login-form', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
     $trail->push('შესვლა', route('login-form'));
 });

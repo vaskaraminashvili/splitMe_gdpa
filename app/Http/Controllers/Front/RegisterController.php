@@ -30,7 +30,7 @@ class RegisterController extends Controller
 
         $user = User::create($credentials);
         $user->specializations()->attach($credentials['specialization']);
-        dd($user);
+        return redirect()->route('login-form')->with('profile_created', 'პროფილი წარმატებით შეიქმნა');
     }
 
 
