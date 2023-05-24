@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="{{ asset('../front_assets/css/responsive.css') }}">
 
   @vite(['resources/web/scss/app.scss', 'resources/web/scripts/app.js'])
+  @stack('style')
   {{--  <link rel="stylesheet" href="{{ asset('build/assets/app-4c41e8b9.css') }}"> --}}
 </head>
 
@@ -51,7 +52,8 @@
           <div class="col-sm-6 col-xs-12 header-top-right">
             <ul class="list-unstyled">
               @auth
-                <li><a href="register.html"><i class="fa fa-user top-icon"></i> {{ auth()->user()->name }}</a></li>
+                <li><a href="{{ route('profile') }}"><i class="fa fa-user top-icon"></i> {{ auth()->user()->name }}</a>
+                </li>
                 <li>
                   <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -64,7 +66,8 @@
 
               @endauth
               @guest
-                <li><a href="register.html"><i class="fa fa-user-plus top-icon"></i> {{ __('რეგისტრაცია') }}</a></li>
+                <li><a href="{{ route('register-form') }}"><i class="fa fa-user-plus top-icon"></i>
+                    {{ __('რეგისტრაცია') }}</a></li>
                 <li><a href="{{ route('login-form') }}"><i class="fa fa-lock top-icon"></i>{{ __('შესვლა') }}</a></li>
               @endguest
             </ul>
@@ -100,8 +103,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="intro-text ">
-              <h1>Login</h1>
-              {{-- <p>{{ Breadcrumbs::render('web.login') }}</p> --}}
+              <p>{{ Breadcrumbs::render() }}</p>
             </div>
           </div>
         </div><!-- /.row -->
@@ -221,5 +223,6 @@ JavaScript Files
 <script type="text/javascript" src="front_assets/js/assets/revolution/revolution.js"></script>
 <!-- Custom JS -->
 <script src="front_assets/js/custom.js"></script>
+@stack('script')
 
 </html>

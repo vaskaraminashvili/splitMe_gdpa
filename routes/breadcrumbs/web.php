@@ -9,13 +9,23 @@ use Diglactic\Breadcrumbs\Breadcrumbs;
 use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
 
 // Home
-Breadcrumbs::for('home', function (BreadcrumbTrail $trail) {
-    $trail->push('Home', route('home'));
+Breadcrumbs::for ('home', function (BreadcrumbTrail $trail) {
+    $trail->push('მთავარი', route('home'));
 });
 
 // Home > Login
-Breadcrumbs::for('login', function (BreadcrumbTrail $trail) {
+Breadcrumbs::for ('login', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
-    $trail->push('login', route('login-form'));
+    $trail->push('შესვლა', route('login-form'));
 });
 
+Breadcrumbs::for ('register-form', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('რეგისტრაცია', route('register-form'));
+});
+
+
+Breadcrumbs::for ('about', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('ჩვენს შესახებ', route('about'));
+});

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\UserController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\LoginController;
+use App\Http\Controllers\Front\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,9 @@ Route::get('/', IndexController::class)->name('home');
 Route::get('/login', [LoginController::class, 'loginForm'])->name('login-form');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/register', [RegisterController::class, 'registerForm'])->name('register-form');
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
 Route::post('/profile', [UserController::class, 'updateProfile'])->name('updateProfile');

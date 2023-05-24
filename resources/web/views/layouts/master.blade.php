@@ -30,6 +30,7 @@
 
 
   @vite(['resources/web/scss/app.scss', 'resources/web/scripts/app.js'])
+  @stack('style')
   {{--  <link rel="stylesheet" href="{{ asset('build/assets/app-4c41e8b9.css') }}"> --}}
 </head>
 
@@ -66,7 +67,8 @@
 
               @endauth
               @guest
-                <li><a href="register.html"><i class="fa fa-user-plus top-icon"></i> {{ __('რეგისტრაცია') }}</a></li>
+                <li><a href="{{ route('register-form') }}"><i class="fa fa-user-plus top-icon"></i>
+                    {{ __('რეგისტრაცია') }}</a></li>
                 <li><a href="{{ route('login-form') }}"><i class="fa fa-lock top-icon"></i>{{ __('შესვლა') }}</a></li>
               @endguest
             </ul>
@@ -214,5 +216,6 @@ JavaScript Files
 <script type="text/javascript" src="{{ asset('../front_assets/js/assets/revolution/revolution.js') }}"></script>
 <!-- Custom JS -->
 <script src="{{ asset('../front_assets/js/custom.js') }}"></script>
+@stack('script')
 
 </html>

@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->role_id === 1;
     }
+
+    public function specializations()
+    {
+        return $this->belongsToMany(Specialization::class);
+    }
 }
