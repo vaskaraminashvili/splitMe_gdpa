@@ -97,4 +97,23 @@
     <!-- ./ End Contact Area section -->
 
   </div>
+  @if (session()->has('emailSent'))
+    @push('style')
+      <link rel="stylesheet" type="text/css" href="{{ asset('../front_assets/css/assets/sweetalert2.min.css') }}" />
+    @endpush
+    @push('script')
+      <script src="{{ asset('../front_assets/js/assets/sweetalert2.min.js') }}"></script>
+      <script>
+        $(function() {
+
+          setTimeout(function() {
+            Swal.fire({
+              icon: 'success',
+              title: "თქვენ შეტყობინება გაგზავნილია",
+            })
+          }, 1000);
+        });
+      </script>
+    @endpush
+  @endif
 </x-web::layouts.secondary>
