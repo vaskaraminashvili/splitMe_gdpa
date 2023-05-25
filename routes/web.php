@@ -6,6 +6,7 @@ use App\Http\Controllers\Front\UserController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\LoginController;
 use App\Http\Controllers\Front\RegisterController;
+use App\Http\Controllers\Front\ContactUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,8 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
 Route::post('/profile', [UserController::class, 'updateProfile'])->name('updateProfile');
+
+Route::post('/send_email', [ContactUsController::class, 'sendEmail'])->name('sendEmail');
 
 
 Route::get('/contact', function () {

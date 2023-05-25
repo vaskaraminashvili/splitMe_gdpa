@@ -55,33 +55,33 @@
             <div class="input-contact-form">
 
 
-              <div id="contact">
-                <div id="message"></div>
-                <form method="post" action="contact.php" name="contactform" id="contactform">
+              <div>
+                <form method="post" action="{{ route('sendEmail') }}" name="contactform">
+                  @csrf
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name" name="name" id="name">
+                        <input type="text" class="form-control" placeholder="Name" name="name">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email" name="email" id="email">
+                        <input type="email" class="form-control" placeholder="Email" name="email">
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject" name="subject" id="subject">
+                        <input type="text" class="form-control" placeholder="Subject" name="subject">
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <div class="form-group">
-                        <textarea class="form-control" rows="6" placeholder="Message" name="comments" id="comments"></textarea>
+                        <textarea class="form-control" rows="6" placeholder="Message" name="comments"></textarea>
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <div class="full-width">
-                        <input value="Submit" type="submit" name="submit" id="submit">
+                        <button type="submit">Submit</button>
                       </div>
                     </div>
                   </div>
