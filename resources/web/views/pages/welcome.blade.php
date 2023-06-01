@@ -49,9 +49,9 @@
     </div><!-- END SLIDER CONTAINER WRAPPER -->
   </x-slot:header>
 
-  <div class="home_version_02">
+  <div class="home_version_02 event-01">
     <!-- Start Welcome Area section -->
-    <section class="Welcome-area">
+    <section class="Welcome-area events-grid-3">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 section-header-box">
@@ -62,54 +62,47 @@
             </div><!-- ends: .section-header -->
           </div>
         </div>
+        <div class="row event-body-content">
+          @foreach ($data['news'] as $item)
+            <div class="col-sm-4 single-item">
+              <div class="events-single-box">
+                <div class="row">
 
+
+                  <div class="col-sm-12">
+                    <div class="event-info">
+                      <h3>
+                        Basic UI & UX Design for new
+                        development
+                      </h3>
+                      <p>
+                        Lorem ipsum dolor sit amet
+                        mollis felis dapibs arcur donec
+                        viverra phasellus eget. Etiam ma
+                        ecenas vel vici quis dictum.
+                      </p>
+
+                      <a class="event-btn" href="#">Read More<i
+                          class="fa fa-long-arrow-right events-btn-icon"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          @endforeach
+
+        </div>
         <div class="row">
-          <div class="col-sm-4 wel-ful-box-2">
-            <div class="wel-text-box">
-              <div class="wel-icon">
-                <img src="{{ asset('../front_assets/images/index-02/welcome-01.png') }}" alt="">
-              </div>
-              <div class="wel-text">
-                <h3>Learn Anywhere Online</h3>
-                <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget Etiam
-                  maecenas.</p>
-                <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4 wel-ful-box-2">
-            <div class="wel-text-box">
-              <div class="wel-icon">
-                <img src="{{ asset('../front_assets/images/index-02/welcome-02.png') }}" alt="">
-              </div>
-              <div class="wel-text">
-                <h3>Graduation Certificate</h3>
-                <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget Etiam
-                  maecenas.</p>
-                <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4  wel-ful-box-2">
-            <div class="wel-text-box">
-              <div class="wel-icon">
-                <img src="{{ asset('../front_assets/images/index-02/welcome-03.png') }}" alt="">
-              </div>
-              <div class="wel-text">
-                <h3>Professional Teachers</h3>
-                <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra Pede phasellus eget Etiam
-                  maecenas.</p>
-                <a href="#">read more<i class="fa fa-long-arrow-right"></i></a>
-              </div>
+          <div class="col-md-12">
+            <div class="event-bottom-btn">
+              <a href="#" class="view-more-item">view all events</a>
             </div>
           </div>
         </div>
+
       </div>
     </section>
     <!-- ./ End Welcome Area section -->
-
 
     <!-- Start Register Area section -->
     <section class="register-area">
