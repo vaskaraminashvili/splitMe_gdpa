@@ -4,6 +4,9 @@
     <a data-scroll href="{{ route('home') }}">{{ __('მთავარი') }}</a>
   </li>
   <li class="">
+    <a data-scroll href="{{ route('news-index') }}">{{ __('სიახლეები') }}</a>
+  </li>
+  <li class="">
     <a data-scroll href="{{ route('about') }}">{{ __('ჩვენს შესახებ') }}</a>
   </li>
   <li class="">
