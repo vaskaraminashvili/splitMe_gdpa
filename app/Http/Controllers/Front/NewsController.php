@@ -22,6 +22,10 @@ class NewsController extends Controller
     public function show(News $news)
     {
         $data['news'] = $news;
+        $data['latest'] = News::query()
+            ->latest()
+            ->limit(3)
+            ->get();
         return view('web::pages.news.show', compact('data'));
     }
 }

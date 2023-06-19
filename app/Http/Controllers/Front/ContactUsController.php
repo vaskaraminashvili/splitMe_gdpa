@@ -13,6 +13,6 @@ class ContactUsController extends Controller
     {
         Mail::to('info@gdpa.ge')->send(new ContactUs($request->all()));
 
-        return redirect()->route('contact')->with('emailSent', 'პროფილი წარმატებით შეიქმნა');
+        return redirect()->route('contact')->with('emailSent', 'ელ.ფოსტა წარმატებით გაიგზავნა');
     }
 }
