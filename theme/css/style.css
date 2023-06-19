@@ -11,18 +11,18 @@
 /*----------------------------------------------------
 [Color codes]
 
-	Background:		
-	Background Overlay: 
-	Content: #727272	
+	Background:
+	Background Overlay:
+	Content: #727272
 	Header h1:#333333
-	Header h2:#333333 	
+	Header h2:#333333
 	Header h3: #333333
 
 -------------------------------------------------------*/
 /*------------------------------------------------------
 [Typography]
 	Body: 'Open Sans', sans-serif;
-	Headers: 'Montserrat' ;		
+	Headers: 'Montserrat' ;
 	Input, textarea: 'Open Sans' Light;
 	Sidebar heading: 'Montserrat' Semibold;
 ----------------------------------------------------*/
@@ -30,7 +30,7 @@
 		===[ Default Style ]===
 ======================================*/
 	/* Variables */
-	
+
 	body {
 	    font-family: "Open Sans", sans-serif;
 	    overflow-x: hidden;
@@ -96,7 +96,7 @@
 	    transform: none;
 	}
 	/* -------- Pre Loader -------- */
-	
+
 	#preloader {
 	    position: fixed;
 	    top: 0;
@@ -132,7 +132,7 @@
 	    text-transform: uppercase;
 	}
 	/*=======[ Index Search Style ]========*/
-	
+
 	#search {
 	    position: fixed;
 	    top: 0px;
@@ -192,7 +192,7 @@
 	/*=================================================
 		===[ Home Version 01 ]===
 ===================================================*/
-	
+
 	header {
 	    /*=======[ Index Navbar Style ]========*/
 	    /*=======[ Index Header Body Style ]========*/
@@ -530,7 +530,7 @@
 	    transition: all 0.3s ease-in-out;
 	}
 	/*=======[ Index Rev Slider Content Style ]========*/
-	
+
 	.slider-content-bottom {
 	    background: #ffffff;
 	    text-align: center;
@@ -619,7 +619,7 @@
 	    padding-left: 10px;
 	}
 	/*=======[ Index Wellcome Area Style ]========*/
-	
+
 	.Welcome-area {
 	    background: #ffffff;
 	    padding-top: 100px;
@@ -661,7 +661,7 @@
 	    margin-bottom: 11px;
 	}
 	/*=======[ Index Courses Area Style ]========*/
-	
+
 	.Courses-area {
 	    background: #f9f9f9;
 	    padding: 100px 0;
@@ -813,7 +813,7 @@
 	    transition: all 0.3s ease-in-out;
 	}
 	/*=======[ Indec Video Section Style ]========*/
-	
+
 	.video-main-area {
 	    background: transparent url("../images/index/video-bg.jpg") no-repeat center center/cover;
 	    padding: 255px 0;
@@ -844,7 +844,7 @@
 	    padding-bottom: 0px;
 	}
 	/*=======[ Index Up Comming Events ]========*/
-	
+
 	.events-area {
 	    background: #ffffff;
 	    padding: 100px 0;
@@ -908,7 +908,7 @@
 	    padding-left: 5px;
 	}
 	/*=======[ Index Counter Area Style ]========*/
-	
+
 	.counter-area {
 	    background: transparent url("../images/index/counter-bg.jpg") no-repeat center center/cover;
 	    min-height: 500px;
@@ -992,7 +992,7 @@
 	    font-size: 25px;
 	}
 	/*=======[ Index Publication Area Style ]========*/
-	
+
 	.publication-area {
 	    background: #ffffff;
 	    padding: 100px 0;
@@ -1046,7 +1046,7 @@
 	    transition: all 0.3s ease-in-out;
 	}
 	/*=======[Index News Area Style ]========*/
-	
+
 	.news-area {
 	    background: transparent url("../images/index/news-bg.jpg") no-repeat center center/cover;
 	    min-height: 500px;
@@ -1147,7 +1147,7 @@
 	    padding-left: 5px;
 	}
 	/*=======[Index Students Say Area Style ]========*/
-	
+
 	.students-say-area {
 	    background: #ffffff;
 	    padding: 100px 0;
@@ -1222,7 +1222,7 @@
 	    background: url("../images/index/arror-02-right.png") center center no-repeat;
 	}
 	/*=======[Index Instraction Area Style ]========*/
-	
+
 	.instraction-area {
 	    background: transparent url("../images/index/instraction-bg.jpg") no-repeat center center/cover;
 	    position: relative;
@@ -1274,7 +1274,7 @@
 	    text-transform: uppercase;
 	}
 	/*=======[Index Footer Area Style ]========*/
-	
+
 	footer {
 	    background: transparent url("../images/index/footer-bg.jpg") no-repeat center center/cover;
 	    min-height: 150px;
@@ -1406,7 +1406,7 @@
 	/*====================================================================================================
 										===[ Index  Version 02 ]===
 =====================================================================================================*/
-	
+
 	.home_version_02 {
 	    overflow-x: hidden;
 	    /*=======[ Index 02 Welcome Area Style ]========*/
@@ -1486,7 +1486,6 @@
 	}
 
 	.home_version_02 .register-area {
-	    background: transparent url("../images/index-02/register-bg.jpg") no-repeat center center/cover;
 	    min-height: 500px;
 	    position: relative;
 	    padding: 100px 0;
@@ -2082,7 +2081,7 @@
 	/*==============================================================================================================
 										     ===[ Index  Version 03 ]===
 ================================================================================================================*/
-	
+
 	.home_version_03 {
 	    /*=======[ Index 03 Default Style ]========*/
 	    /*=======[ Index 03 Header Style ]========*/
@@ -2918,7 +2917,7 @@
 	/*====================================================================================================
 										===[ Index  Version 04  ]===
 =====================================================================================================*/
-	
+
 	.home_version_04 {
 	    /*=======[Index 04 Default Style ]========*/
 	    /*=======[Index 04 Navbar Style ]========*/
@@ -3738,7 +3737,7 @@
 	/*====================================================================================================
 										===[ Single Courses ]===
 =====================================================================================================*/
-	
+
 	.single-courses_v {
 	    /*===[Single Courses Header Style ]====*/
 	    /*===[ Single Courses_01 Single Courses Area Style ]====*/
@@ -4730,7 +4729,7 @@
 	/*====================================================================================================
 										===[ Courses Style ]===
 =====================================================================================================*/
-	
+
 	.courses {
 	    /*=======[Courses Style 01 ]========*/
 	    /*=======[Courses Style 02 ]========*/
@@ -5356,7 +5355,7 @@
 	/*====================================================================================================
 										===[ Blog Page ]===
 =====================================================================================================*/
-	
+
 	.blog_1 header .header-body {
 	    background: url("../images/Single_cources/banner-bg.jpg") no-repeat center center;
 	    min-height: 360px;
@@ -5791,7 +5790,7 @@
 	/*====================================================================================================
 										===[ Blog Post ]===
 =====================================================================================================*/
-	
+
 	.post-1 header .header-body {
 	    background: url("../images/Single_cources/banner-bg.jpg") no-repeat center center;
 	    min-height: 360px;
@@ -6389,7 +6388,7 @@
 	/*====================================================================================================
 										===[ Teachers Page ]===
 =====================================================================================================*/
-	
+
 	.teachers-01 header .header-body {
 	    background: url("../images/Single_cources/banner-bg.jpg") no-repeat center center;
 	    min-height: 360px;
@@ -6595,7 +6594,7 @@
 	/*====================================================================================================
 										===[ Teachers profile ]===
 =====================================================================================================*/
-	
+
 	.t-profile-01 header .header-body {
 	    background: url("../images/Single_cources/banner-bg.jpg") no-repeat center center;
 	    min-height: 360px;
@@ -6961,7 +6960,7 @@
 	/*====================================================================================================
 										===[ Become A Teachers ]===
 =====================================================================================================*/
-	
+
 	.become_teachers header .header-body {
 	    background: url("../images/Single_cources/banner-bg.jpg") no-repeat center center;
 	    min-height: 360px;
@@ -7119,7 +7118,7 @@
 	/*====================================================================================================
 										===[ event details ]===
 =====================================================================================================*/
-	
+
 	.event-details-1 header .header-body {
 	    background: url("../images/Single_cources/banner-bg.jpg") no-repeat center center;
 	    min-height: 360px;
@@ -7511,7 +7510,7 @@
 	/*====================================================================================================
 										===[ Events Page ]===
 =====================================================================================================*/
-	
+
 	.event-01 {
 	    /*=======[ Up Comming Events ]========*/
 	}
@@ -7776,7 +7775,7 @@
 	/*====================================================================================================
 										===[ Contact Form Style ]===
 =====================================================================================================*/
-	
+
 	.contact header .header-body {
 	    background: url("../images/Single_cources/banner-bg.jpg") no-repeat center center;
 	    min-height: 360px;
@@ -7928,7 +7927,7 @@
 	/*====================================================================================================
 										===[ Register Style ]===
 =====================================================================================================*/
-	
+
 	.register header .header-body {
 	    background: url("../images/register-bg.jpg") no-repeat center center;
 	    min-height: 360px;
@@ -8033,7 +8032,7 @@
 	/*====================================================================================================
 										===[ Login Style ]===
 =====================================================================================================*/
-	
+
 	.login header .header-body {
 	    background: url("../images/register-bg.jpg") no-repeat center center;
 	    min-height: 360px;
@@ -8204,7 +8203,7 @@ header .header-body .edu-navbar .edu-nav .nav li ul.dropdown li {
 }
 header .header-body .edu-navbar .edu-nav .nav li a {
     padding-top: 0px;
-}   
+}
 header .header-body .edu-navbar .edu-nav .nav li ul.dropdown {
     max-height: 0%;
     visibility: hidden;
@@ -8285,7 +8284,7 @@ header .header-body .edu-navbar .edu-nav .nav li ul.dropdown .dropdown-list-box-
 header .header-body .edu-navbar .edu-nav .nav li ul.dropdown .dropdown-list-box-02 a:hover .menu-icon {
     color: #ffffff;
     transition: all 0.5s ease-in-out;
-}	
+}
 span.c-author {
     position: absolute;
     top: 18px;

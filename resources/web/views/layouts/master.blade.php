@@ -118,8 +118,8 @@
               </span>
               GDPA
             </h3>
-            <p>We are Educatios, creat your passion and inspiration. And hope success will come for your dream. Please
-              send email and get latest news.</p>
+            <p>საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც
+              უცნობმა მბეჭდავმა ამწყობ დაზა. განსა</p>
             <ul class="list-unstyled">
               <li><span><i class="fa fa-phone footer-icon"></i></span>032 294-03-94</li>
               <li><span><i class="fa fa-envelope footer-icon"></i></span>info@gdpa.ge</li>
@@ -128,7 +128,7 @@
           </div>
 
 
-          <div class="col-sm-3 col-xs-offset-6">
+          {{-- <div class="col-sm-3 col-xs-offset-6">
             <h3>Get in touch</h3>
             <p>Enter your email and we'll send you more information.</p>
 
@@ -140,7 +140,7 @@
                 </div>
               </div>
             </form>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
